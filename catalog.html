@@ -5,11 +5,10 @@
   <title>HTML Academy: Седона - Каталог</title>
 </head>
 <body>
-
   <!-- Page header -->
   <header class="page__header">
     <a href="index.html" class="header__logo">
-      <img src="" alt="Логотип сайта 'Седона'">
+      <img src="" alt="Логотип сайта 'Седона'.">
     </a>
     <nav class="header__nav">
       <ul class="nav__list">
@@ -38,7 +37,6 @@
       <a href="#" class="btn btn--all">Хочу сюда!</a>
     </nav>
   </header>
-
   <!-- Page main -->
   <main class="main__catalog">
     <h1 class="catalog__title">Гостиницы Седоны</h1>
@@ -53,7 +51,6 @@
         <a class="breadcrumbs__link">Гостиницы</a>
       </li>
     </ul>
-
     <!-- Section filter -->
     <section class="filter">
       <h2 class="visually-hidden">Фильтр выбора гостиниц</h2>
@@ -122,17 +119,15 @@
             </li>
           </ul>
         </fieldset>
-        <section class="filter__buttons">
+        <div class="filter__buttons">
           <button class="btn btn--bg-blue btn--size-s" type="submit">Применить</button>
           <button class="btn btn--bg-none" type="reset">Сбросить</button>
-        </section>
+        </div>
       </form>
     </section>
-
     <!-- Section products -->
     <section class="products">
       <h2 class="visually-hidden">Список гостиниц</h2>
-
       <!-- Products header -->
       <header class="products__header">
         <p class="products__found-info">Найдено гостиниц: <span class="found-num">38</span></p>
@@ -141,21 +136,20 @@
           <option value="popular">Сначала популярные</option>
           <option value="expensive">Сначала дорогие</option>
         </select>
-        <a href="#" class="filter-btn active">
+        <button class="filter-btn active" type="button">
           <span class="visually-hidden">Показать карточки</span>
-        </a>
-        <a href="#" class="filter-btn">
+        </button>
+        <button class="filter-btn" type="button">
           <span class="visually-hidden">Показать миниатюры</span>
-        </a>
-        <a href="#" class="filter-btn">
+        </button>
+        <button class="filter-btn" type="button">
           <span class="visually-hidden">Показать список</span>
-        </a>
+        </button>
       </header>
-
       <!-- Products list -->
       <ul class="products__list">
         <li class="products__item">
-          <img src="" alt="Пейзаж около гостииницы" class="products__photo">
+          <img src="" alt="Пейзаж около гостииницы." class="products__photo">
           <h3 class="products__title">Amara Resort & Spa</h3>
           <p class="products__description">
             <span class="products__type">Гостиница</span>
@@ -166,12 +160,12 @@
             <a href="#" class="btn btn--bg-blue btn--size-s">В избранное</a>
           </div>
           <p class="products__rating">
-            <img src="" alt="Отель 4 звезды" class="rating__stars">
+            <img src="" alt="Отель 4 звезды." class="rating__stars">
             <span class="rating__value">Рейтинг: 8,5</span>
           </p>
         </li>
         <li class="products__item">
-          <img src="" alt="Пейзаж около гостииницы" class="products__photo">
+          <img src="" alt="Пейзаж около гостииницы." class="products__photo">
           <h3 class="products__title">Villas at Poco Diablo</h3>
           <p class="products__description">
             <span class="products__type">Гостиница</span>
@@ -182,12 +176,12 @@
             <a href="#" class="btn btn--bg-green btn--size-s">В избранном</a>
           </div>
           <p class="products__rating">
-            <img src="" alt="Отель 4 звезды" class="rating__stars">
+            <img src="" alt="Отель 4 звезды." class="rating__stars">
             <span class="rating__value">Рейтинг: 9,2</span>
           </p>
         </li>
         <li class="products__item">
-          <img src="" alt="Пейзаж около гостииницы" class="products__photo">
+          <img src="" alt="Пейзаж около гостииницы." class="products__photo">
           <h3 class="products__title">Desert Quail Inn</h3>
           <p class="products__description">
             <span class="products__type">Гостиница</span>
@@ -198,12 +192,12 @@
             <a href="#" class="btn btn--bg-blue btn--size-s">В избранное</a>
           </div>
           <p class="products__rating">
-            <img src="" alt="Отель 3 звезды" class="rating__stars">
+            <img src="" alt="Отель 3 звезды." class="rating__stars">
             <span class="rating__value">Рейтинг: 6,9</span>
           </p>
         </li>
         <li class="products__item">
-          <img src="" alt="Пейзаж около гостииницы" class="products__photo">
+          <img src="" alt="Пейзаж около гостииницы." class="products__photo">
           <h3 class="products__title">GreenTree Inn</h3>
           <p class="products__description">
             <span class="products__type">Гостиница</span>
@@ -214,12 +208,11 @@
             <a href="#" class="btn btn--bg-blue btn--size-s">В избранное</a>
           </div>
           <p class="products__rating">
-            <img src="" alt="Отель 2 звезды" class="rating__stars">
+            <img src="" alt="Отель 2 звезды." class="rating__stars">
             <span class="rating__value">Рейтинг: 5,0</span>
           </p>
         </li>
       </ul>
-
       <!-- Products pagination -->
       <ul class="pagination">
         <li class="pagination__item">
@@ -243,7 +236,6 @@
       </ul>
       <button class="button pagination-show-more" type="button">Показать ещё</button>
     </section>
-
     <!-- Section subscription -->
     <section class="subscription">
       <header class="section__header">
@@ -252,12 +244,11 @@
       </header>
       <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="visually-hidden" for="subscription__input">Поле для ввода email</label>
-        <input class="subscription__input" id="subscription__input" type="email" placeholder="Ваш e-mail">
+        <input class="subscription__input" id="subscription__input" type="email" placeholder="Ваш e-mail*" required>
         <button class="btn btn--bg-blue" type="submit">Подписаться</button>
       </form>
     </section>
   </main>
-
   <!-- Page footer -->
   <footer class="page__footer">
     <section class="social">
@@ -271,9 +262,8 @@
         <span class="visually-hidden">Ютуб</span>
       </a>
     </section>
-    <p class="footer__tel">+7 (812) 812-12-12</p>
-    <img src="#" alt="Логотип HTML Academy" class="footer__logo">
+    <a class="footer__tel" href="tel: 88188121212">+7 (812) 812-12-12</a>
+    <img src="#" alt="Логотип HTML Academy." class="footer__logo">
   </footer>
-
 </body>
 </html>
