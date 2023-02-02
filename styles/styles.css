@@ -22,6 +22,20 @@ body {
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
+    color: #333;
+}
+/*--- Прямчущий класс ---*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 /*--- Buttons ---*/
 .btn {
@@ -94,4 +108,20 @@ body {
 .intro__title {
     display: block;
     margin: 0 auto;
+}
+/*--- Section Header-style ---*/
+.section__header {
+    padding: 64px 0;
+    text-align: center;
+}
+.section__title {
+    color: #000;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+.section__description {
+    font-size: 22px;
+    line-height: 26px;
 }
