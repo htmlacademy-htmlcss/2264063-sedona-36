@@ -68,7 +68,7 @@ body {
     background-color: #82B3D3;
     width: 140px;
 }
-.btn--hotels.selected {
+.btn--hotels.active {
     background-color: #7DB54F;
 }
 .btn--hotels-more {
