@@ -23,7 +23,57 @@ body {
     font-size: 18px;
     line-height: 21px;
 }
-
+/*--- Buttons ---*/
+.btn {
+    font-family: "PT Sans", sans-serif;
+    display: block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 8px 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+}
+.btn--nav {
+    background-color: #756157;
+    width: 160px;
+}
+.btn--hotel-search {
+    background-color: #756157;
+    width: 376px;
+    font-size: 20px;
+    line-height: 36px;
+}
+.btn--subscribe {
+    background-color: #82B3D3;
+    font-size: 20px;
+    line-height: 36px;
+    border-radius: 0 4px 4px 0;
+    width: 232px;
+}
+.btn--filter {
+    background-color: #82B3D3;
+    width: 191px;
+}
+.btn--bg-none {
+    background-color: transparent;
+}
+.btn--hotels {
+    background-color: #82B3D3;
+    width: 140px;
+}
+.btn--hotels.selected {
+    background-color: #7DB54F;
+}
+.btn--hotels-more {
+    background-color: #756157;
+}
 /*--- Page Header ---*/
 .header__nav {
     font-weight: 700;
