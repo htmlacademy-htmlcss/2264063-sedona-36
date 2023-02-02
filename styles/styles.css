@@ -19,4 +19,29 @@
 }
 body {
     margin: 0;
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+/*--- Page Header ---*/
+.header__nav {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #000;
+}
+/*--- Intro ---*/
+.intro {
+    background:
+            url("../images/index/intro/intro-bg-mask.svg") no-repeat bottom,
+            url("../images/index/intro/intro-bg.jpg") no-repeat center,
+            #c0695b;
+    background-size: 100% auto;
+    padding: 51px 0 82px;
+}
+.intro__title {
+    display: block;
+    margin: 0 auto;
 }
