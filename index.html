@@ -10,10 +10,12 @@
 <body>
 <!-- Page header -->
 <header class="page__header">
-	<img src="images/components/logo.png"
-			 alt="Логотип сайта 'Седона'."
-			 width="140"
-			 height="70"
+	<img
+			class="header__logo"
+			src="images/components/logo.png"
+			alt="Логотип сайта 'Седона'."
+			width="140"
+			height="70"
 	>
 	<nav class="header__nav">
 		<ul class="nav__list">
@@ -33,28 +35,30 @@
 				>Гостиницы</a>
 			</li>
 		</ul>
-		<ul class="nav__list nav__list--user-nav">
-			<li class="nav__item">
-				<a href="#"
-					 class="nav__link"
-				>
-					<span class="visually-hidden">Поиск</span>
-					<!--		иконку добавлю через CSS		-->
-				</a>
-			</li>
-			<li class="nav__item">
-				<a href="#"
-					 class="nav__link"
-				>
-					<span class="visually-hidden">Избранное</span>
-					<!--		иконку добавлю через CSS		-->
-					<span class="liked-count">12</span>
-				</a>
-			</li>
-		</ul>
-		<a href="#"
-			 class="btn btn--brown"
-		>Хочу сюда!</a>
+		<div class="nav__user-side">
+			<ul class="nav__list">
+				<li class="nav__item">
+					<a href="#"
+						 class="nav__link"
+					>
+						<span class="visually-hidden">Поиск</span>
+						<!--		иконку добавлю через CSS		-->
+					</a>
+				</li>
+				<li class="nav__item">
+					<a href="#"
+						 class="nav__link"
+					>
+						<span class="visually-hidden">Избранное</span>
+						<!--		иконку добавлю через CSS		-->
+						<span class="liked-count">12</span>
+					</a>
+				</li>
+			</ul>
+			<a href="#"
+				 class="btn btn--brown nav__btn"
+			>Хочу сюда!</a>
+		</div>
 	</nav>
 </header>
 <!-- Page main -->

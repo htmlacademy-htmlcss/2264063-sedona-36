@@ -61,10 +61,11 @@ body {
 .btn--size-l {
     font-size: 20px;
     line-height: 36px;
+    padding: 8px 50px;
+    width: fit-content;
 }
 .btn--subscribe {
     border-radius: 0 4px 4px 0;
-    width: 232px;
 }
 .btn--blue {
     background-color: #82B3D3;
@@ -73,12 +74,40 @@ body {
     background-color: #7DB54F;
 }
 /*--- Page Header ---*/
+.page__header {
+    display: flex;
+    padding: 0 70px;
+}
+.header__logo {
+    margin-right: 30px;
+    margin-bottom: -6px;
+}
 .header__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
     text-transform: capitalize;
+}
+.nav__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.nav__item a{
+    text-align: center;
     color: #000;
+    text-decoration: none;
+    padding: 20px 16px;
+}
+.nav__user-side {
+    display: flex;
+}
+.nav__btn {
+    width: 160px;
+    align-self: center;
 }
 /*--- Intro ---*/
 .intro {
