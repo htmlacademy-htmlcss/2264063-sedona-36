@@ -25,7 +25,7 @@ body {
     line-height: 21px;
     color: #333;
 }
-/*--- Прямчущий класс ---*/
+/*--- Прячущий класс ---*/
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -261,4 +261,18 @@ body {
 .subscription__form {
     display: flex;
     justify-content: center;
+}
+/*--- Footer ---*/
+.page__footer {
+    display: flex;
+    padding: 40px 70px 30px;
+    justify-content: space-between;
+}
+.footer__tel {
+    font-size: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+    text-decoration: none
 }
