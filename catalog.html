@@ -13,7 +13,8 @@
 	<a href="index.html"
 		 class="header__logo"
 	>
-		<img src="images/components/logo.png"
+		<img class="header__logo"
+				 src="images/components/logo.png"
 				 alt="Логотип сайта 'Седона'."
 				 width="140"
 				 height="70"
@@ -57,14 +58,13 @@
 			</li>
 		</ul>
 		<a href="#"
-			 class="btn btn--brown"
+			 class="btn btn--brown nav__btn"
 		>Хочу сюда!</a>
 	</nav>
 </header>
 <!-- Page main -->
 <main class="main__catalog">
 	<header class="catalog__header">
-	<!--	Добавлю bg через CSS	-->
 		<h1 class="catalog__title">Гостиницы Седоны</h1>
 		<ul class="breadcrumbs">
 			<li class="breadcrumbs__item">
@@ -72,7 +72,6 @@
 					 class="breadcrumbs__link"
 				>
 					<span class="visually-hidden">На главную</span>
-					<!-- Иконку добавлю как background -->
 				</a>
 			</li>
 			<li class="breadcrumbs__item">
@@ -164,12 +163,14 @@
 								<input class="field__input"
 											 placeholder="от"
 											 type="text"
+											 value="0"
 								>
 							</label>
 							<label class="field">
 								<input class="field__input"
 											 placeholder="до"
 											 type="text"
+											 value="9000"
 								>
 							</label>
 						</li>

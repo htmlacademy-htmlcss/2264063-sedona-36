@@ -47,6 +47,7 @@ body {
     border: none;
     padding: 8px 0;
     color: #fff;
+    background: none;
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
@@ -275,4 +276,49 @@ body {
     text-align: center;
     color: #000;
     text-decoration: none
+}
+/*=============== CATALOG ===============*/
+/*--- Header ---*/
+.catalog__header {
+    color: #fff;
+    background: url("../images/catalog/catalog-filter-bg.jpg") no-repeat center;
+    background-size: cover;
+    padding: 70px;
+    padding-top: 35px;
+}
+.catalog__title {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 78px;
+}
+.breadcrumbs {
+    display: flex;
+    list-style: none;
+    font-size: 16px;
+}
+.filter__form {
+    display: flex;
+}
+.filter__group {
+    border: none;
+}
+.filter__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+.filter__list {
+    list-style: none;
+    padding: 0;
+}
+.control {
+    font-size: 18px;
+    line-height: 23px;
+}
+.field__input {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
 }
