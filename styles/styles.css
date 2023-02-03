@@ -41,16 +41,20 @@ body {
 /*--- Buttons ---*/
 .btn {
     font-family: "PT Sans", sans-serif;
+
     display: inline-block;
     cursor: pointer;
     outline: none;
     border: none;
     padding: 8px 0;
+
     color: #fff;
     background: none;
+
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
+
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
@@ -79,8 +83,7 @@ body {
     padding: 0 70px;
 }
 .header__logo {
-    margin-right: 30px;
-    margin-bottom: -6px;
+    margin: 0 30px -6px 0;
 }
 .header__nav {
     display: flex;
@@ -161,7 +164,7 @@ body {
 /*--- Component Card ---*/
 .card {
     width: 400px;
-    min-height: 384px;
+    min-height: 385px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,6 +191,9 @@ body {
 .benefits .section__header {
     padding: 69px 0 90px;
     width: 680px;
+}
+.benefits .section__title {
+    margin-bottom: 25px;
 }
 .benefits__list {
     list-style: none;
@@ -320,7 +326,6 @@ body {
     padding: 0;
 }
 .control {
-    font-size: 18px;
     line-height: 23px;
 }
 .field__input {
