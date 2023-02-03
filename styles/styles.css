@@ -329,8 +329,9 @@ body {
     color: #000;
 }
 /*--- Section Hotels ---*/
-.hotels {
-
+.hotels__list {
+    list-style: none;
+    padding: 0;
 }
 .hotels__found-info {
     font-weight: 700;
