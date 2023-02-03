@@ -358,3 +358,36 @@ body {
     line-height: 20px;
     text-transform: uppercase;
 }
+/*--- Pagination ---*/
+.pagination {
+    display: flex;
+    list-style: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+}
+.pagination__item + .pagination__item {
+    margin-left: 8px;
+}
+.pagination__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #82B3D3;
+    text-decoration: none;
+}
+.pagination__link.active {
+    color: #000;
+    background-color: #F2F2F2;
+}
+.pagination--more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+}
