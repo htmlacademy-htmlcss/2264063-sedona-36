@@ -252,8 +252,9 @@ body {
     padding-bottom: 104px;
 }
 .subscription--index {
-    background: url("../images/index/subscription-bg.jpg") no-repeat;
-    background-size: 100% auto;
+    background: url("../images/index/subscription-bg.jpg") no-repeat center,
+                #756157;
+    background-size: cover;
 }
 .subscription .section__header {
     padding: 96px 0 54px;
@@ -285,7 +286,8 @@ body {
 /*--- Header ---*/
 .catalog__header {
     color: #fff;
-    background: url("../images/catalog/catalog-filter-bg.jpg") no-repeat center;
+    background: url("../images/catalog/catalog-filter-bg.jpg") no-repeat center,
+                #756157;
     background-size: cover;
     padding: 70px;
     padding-top: 35px;
