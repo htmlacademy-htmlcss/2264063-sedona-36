@@ -3,14 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Седона</title>
+	<link rel="stylesheet"
+				href="styles/styles.css"
+	>
 </head>
 <body>
 <!-- Page header -->
 <header class="page__header">
-	<img src="images/logo.png"
-			 alt="Логотип сайта 'Седона'."
-			 width="140"
-			 height="70"
+	<img
+			class="header__logo"
+			src="images/components/logo.png"
+			alt="Логотип сайта 'Седона'."
+			width="140"
+			height="70"
 	>
 	<nav class="header__nav">
 		<ul class="nav__list">
@@ -30,27 +35,30 @@
 				>Гостиницы</a>
 			</li>
 		</ul>
-		<ul class="nav__list nav__list--user-nav">
-			<li class="nav__item">
-				<a href="#"
-					 class="nav__link"
-				>
-					<span class="visually-hidden">Поиск</span>
-					<!--		иконку добавлю через CSS		-->
-				</a>
-			</li>
-			<li class="nav__item">
-				<a href="#"
-					 class="nav__link"
-				>
-					<span class="visually-hidden">Понравившееся</span>
-					<!--		иконку добавлю через CSS		-->
-				</a>
-			</li>
-		</ul>
-		<a href="#"
-			 class="btn btn--all"
-		>Хочу сюда!</a>
+		<div class="nav__user-side">
+			<ul class="nav__list">
+				<li class="nav__item">
+					<a href="#"
+						 class="nav__link"
+					>
+						<span class="visually-hidden">Поиск</span>
+						<!--		иконку добавлю через CSS		-->
+					</a>
+				</li>
+				<li class="nav__item">
+					<a href="#"
+						 class="nav__link"
+					>
+						<span class="visually-hidden">Избранное</span>
+						<!--		иконку добавлю через CSS		-->
+						<span class="liked-count">12</span>
+					</a>
+				</li>
+			</ul>
+			<a href="#"
+				 class="btn btn--brown nav__btn"
+			>Хочу сюда!</a>
+		</div>
 	</nav>
 </header>
 <!-- Page main -->
@@ -60,7 +68,7 @@
 	<section class="intro">
 <!--	Бэкграунд и маску добавлю через CSS на .intro	-->
 		<img class="intro__title"
-				 src="images/welcome.svg"
+				 src="images/index/intro/welcome.svg"
 				 alt="Welcome to the gorgeous. Because the Grand Canyon sucks!'."
 				 width="458"
 				 height="352"
@@ -74,45 +82,55 @@
 		</header>
 		<ul class="benefits__list">
 			<li class="benefits__item">
-				<div class="benefits__card benefits__card--blue benefits__card--text-light">
-					<h3 class="benefits__title">Настоящий городок</h3>
-					<p class="benefits__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+				<div class="card">
+					<div class="card__content">
+						<h3 class="card__title card__title--benefits">Настоящий городок</h3>
+						<p class="card__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+					</div>
 				</div>
 				<img class="benefits__img"
-						 src="images/benefits/benefits-1.jpg"
+						 src="images/index/benefits/benefits-1.jpg"
 						 alt="Дома города Седона."
 						 width="800"
-						 height="384"
+						 height="385"
 				>
 			</li>
 			<li class="benefits__item">
-				<div class="benefits__card benefits__card--lightblue">
-					<h3 class="benefits__title">Небольшая площадь</h3>
-					<p class="benefits__text">Все достопримечательности находятся очень близко</p>
+				<div class="card">
+					<div class="card__content">
+						<h3 class="card__title card__title--benefits">Небольшая площадь</h3>
+						<p class="card__text">Все достопримечательности находятся очень близко</p>
+					</div>
 				</div>
 			</li>
 			<li class="benefits__item">
-				<div class="benefits__card benefits__card--lightgray">
-					<h3 class="benefits__title">Красивая дорога</h3>
-					<p class="benefits__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+				<div class="card">
+					<div class="card__content">
+						<h3 class="card__title card__title--benefits">Красивая дорога</h3>
+						<p class="card__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+					</div>
 				</div>
 			</li>
 			<li class="benefits__item">
-				<div class="benefits__card benefits__card--lightblue">
-					<h3 class="benefits__title">Мало туристов</h3>
-					<p class="benefits__text">Большинство едет в Гранд Каньон и толпится там</p>
+				<div class="card">
+					<div class="card__content">
+						<h3 class="card__title card__title--benefits">Мало туристов</h3>
+						<p class="card__text">Большинство едет в Гранд Каньон и толпится там</p>
+					</div>
 				</div>
 			</li>
 			<li class="benefits__item">
 				<img class="benefits__img"
-						 src="images/benefits/benefits-2.jpg"
+						 src="images/index/benefits/benefits-2.jpg"
 						 alt="Пейзаж с Мостом Дьявола."
 						 width="800"
 						 height="385"
 				>
-				<div class="benefits__card benefits__card--blue benefits__card--text-light">
-					<h3 class="benefits__title">Настоящий городок</h3>
-					<p class="benefits__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+				<div class="card">
+					<div class="card__content">
+						<h3 class="card__title card__title--benefits">Настоящий городок</h3>
+						<p class="card__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+					</div>
 				</div>
 			</li>
 		</ul>
@@ -124,37 +142,43 @@
 			<p class="section__description">Опытный персонал и качественное обслуживание!</p>
 		</header>
 		<ul class="services__list">
-			<li class="services__item services__item--lightblue">
-				<img class="services__icon"
-						 src="images/services/services-1.svg"
-						 alt=""
-						 width="76"
-						 height="72"
-				>
-				<h3 class="services__title">Жильё</h3>
-				<p class="services__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+			<li class="card services__card">
+				<div class="card__content">
+					<img class="services__icon"
+							 src="images/index/services/services-1.svg"
+							 alt=""
+							 width="76"
+							 height="72"
+					>
+					<h3 class="card__title">Жильё</h3>
+					<p class="card__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+				</div>
 			</li>
-			<li class="services__item services__item--light">
-				<img class="services__icon"
-						 src="images/services/services-2.svg"
-						 alt=""
-						 width="75"
-						 height="70"
-				>
-				<h3 class="services__title">Еда</h3>
-				<p class="services__text">Всегда заказывайте
-					топовый фирменный бургер, вы не разочаруетесь!</p>
+			<li class="card services__card">
+				<div class="card__content">
+					<img class="services__icon"
+							 src="images/index/services/services-2.svg"
+							 alt=""
+							 width="75"
+							 height="70"
+					>
+					<h3 class="card__title">Еда</h3>
+					<p class="card__text">Всегда заказывайте
+						топовый фирменный бургер, вы не разочаруетесь!</p>
+				</div>
 			</li>
-			<li class="services__item services__item--lightblue">
-				<img class="services__icon"
-						 src="images/services/services-3.svg"
-						 alt=""
-						 width="65"
-						 height="76"
-				>
-				<h3 class="services__title">Сувениры</h3>
-				<p class="services__text">Не только китайского,
-					но и настоящего местного производства!</p>
+			<li class="card services__card">
+				<div class="card__content">
+					<img class="services__icon"
+							 src="images/index/services/services-3.svg"
+							 alt=""
+							 width="65"
+							 height="76"
+					>
+					<h3 class="card__title">Сувениры</h3>
+					<p class="card__text">Не только китайского,
+						но и настоящего местного производства!</p>
+				</div>
 			</li>
 		</ul>
 	</section>
@@ -167,15 +191,14 @@
 				гостиниц в Седоне</p>
 		</header>
 		<a href="#"
-			 class="btn btn--all"
-		></a>
+			 class="btn btn--brown btn--size-l"
+		>ПОИСК ГОСТИНИЦЫ В седоне</a>
 	</section>
 	<!-- Section subscription -->
-	<section class="subscription">
-		<header class="section__header section__header--text-light">
+	<section class="subscription subscription--index">
+		<header class="section__header">
 			<h2 class="section__title">Подпишитесь на рассылку</h2>
-			<p class="section__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
-				гостиниц в Седоне</p>
+			<p class="section__description">Только полезная информация и никакого спама, честное бойскаутское!</p>
 		</header>
 		<form class="subscription__form"
 					action="https://echo.htmlacademy.ru/"
@@ -190,7 +213,7 @@
 						 placeholder="Ваш e-mail"
 						 required
 			>
-			<button class="btn btn--bg-blue"
+			<button class="btn btn--blue btn--size-l btn--subscribe"
 							type="submit"
 			>Подписаться
 			</button>
@@ -226,7 +249,7 @@
 		 href="tel: 88188121212"
 	>+7 (812) 812-12-12</a>
 	<img class="footer__logo"
-			 src="images/academy-logo.svg"
+			 src="images/components/academy-logo.svg"
 			 alt="Логотип HTML Academy."
 			 width="115"
 			 height="34"

@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Седона - Каталог</title>
+	<link rel="stylesheet"
+				href="styles/styles.css"
+	>
 </head>
 <body>
 <!-- Page header -->
@@ -10,7 +13,8 @@
 	<a href="index.html"
 		 class="header__logo"
 	>
-		<img src="images/logo.png"
+		<img class="header__logo"
+				 src="images/components/logo.png"
 				 alt="Логотип сайта 'Седона'."
 				 width="140"
 				 height="70"
@@ -19,7 +23,7 @@
 	<nav class="header__nav">
 		<ul class="nav__list">
 			<li class="nav__item active">
-				<a href="#"
+				<a href="index.html"
 					 class="nav__link"
 				>Главная</a>
 			</li>
@@ -47,20 +51,20 @@
 				<a href="#"
 					 class="nav__link"
 				>
-					<span class="visually-hidden">Понравившееся</span>
+					<span class="visually-hidden">Избранное</span>
 					<!--		иконку добавлю через CSS		-->
+					<span class="liked-count">12</span>
 				</a>
 			</li>
 		</ul>
 		<a href="#"
-			 class="btn btn--all"
+			 class="btn btn--brown nav__btn"
 		>Хочу сюда!</a>
 	</nav>
 </header>
 <!-- Page main -->
 <main class="main__catalog">
 	<header class="catalog__header">
-	<!--	Добавлю bg через CSS	-->
 		<h1 class="catalog__title">Гостиницы Седоны</h1>
 		<ul class="breadcrumbs">
 			<li class="breadcrumbs__item">
@@ -68,7 +72,6 @@
 					 class="breadcrumbs__link"
 				>
 					<span class="visually-hidden">На главную</span>
-					<!-- Иконку добавлю как background -->
 				</a>
 			</li>
 			<li class="breadcrumbs__item">
@@ -160,12 +163,14 @@
 								<input class="field__input"
 											 placeholder="от"
 											 type="text"
+											 value="0"
 								>
 							</label>
 							<label class="field">
 								<input class="field__input"
 											 placeholder="до"
 											 type="text"
+											 value="9000"
 								>
 							</label>
 						</li>
@@ -182,11 +187,11 @@
 					</ul>
 				</fieldset>
 				<div class="filter__buttons">
-					<button class="btn btn--bg-blue btn--size-s"
+					<button class="btn btn--blue"
 									type="submit"
 					>Применить
 					</button>
-					<button class="btn btn--bg-none"
+					<button class="btn"
 									type="reset"
 					>Сбросить
 					</button>
@@ -207,19 +212,19 @@
 				<option value="popular">Сначала популярные</option>
 				<option value="expensive">Сначала дорогие</option>
 			</select>
-			<button class="filter-btn active"
+			<button class="sort-button active"
 							type="button"
 			>
 				<span class="visually-hidden">Показать карточки</span>
 				<!--		Иконку добавлю через CSS		-->
 			</button>
-			<button class="filter-btn"
+			<button class="sort-button"
 							type="button"
 			>
 				<span class="visually-hidden">Показать миниатюры</span>
 				<!--		Иконку добавлю через CSS		-->
 			</button>
-			<button class="filter-btn"
+			<button class="sort-button"
 							type="button"
 			>
 				<span class="visually-hidden">Показать список</span>
@@ -227,10 +232,10 @@
 			</button>
 		</header>
 		<!-- Hotels list -->
-		<ul class="hotels__list">
+		<ol class="hotels__list">
 			<li class="hotels__item">
 				<img class="hotels__photo"
-						 src="images/hotels/hotel-1.jpg"
+						 src="images/catalog/hotels/hotel-1.jpg"
 						 alt="Пейзаж около гостииницы."
 						 width="300"
 						 height="212"
@@ -242,9 +247,9 @@
 				</p>
 				<div class="hotels__buttons">
 					<a href="#"
-						 class="btn btn--all"
+						 class="btn btn--brown"
 					>Подробнее</a>
-					<button class="btn btn--bg-blue btn--size-s"
+					<button class="btn btn--blue"
 									type="button"
 					>В избранное
 					</button>
@@ -259,7 +264,7 @@
 			</li>
 			<li class="hotels__item">
 				<img class="hotels__photo"
-						 src="images/hotels/hotel-2.jpg"
+						 src="images/catalog/hotels/hotel-2.jpg"
 						 alt="Пейзаж около гостииницы."
 						 width="300"
 						 height="212"
@@ -271,9 +276,9 @@
 				</p>
 				<div class="hotels__buttons">
 					<a href="#"
-						 class="btn btn--all"
+						 class="btn btn--brown"
 					>Подробнее</a>
-					<button class="btn btn--bg-green btn--size-s"
+					<button class="btn btn--blue active"
 									type="button"
 					>В избранном
 					</button>
@@ -288,7 +293,7 @@
 			</li>
 			<li class="hotels__item">
 				<img class="hotels__photo"
-						 src="images/hotels/hotel-3.jpg"
+						 src="images/catalog/hotels/hotel-3.jpg"
 						 alt="Пейзаж около гостииницы."
 						 width="300"
 						 height="212"
@@ -300,9 +305,9 @@
 				</p>
 				<div class="hotels__buttons">
 					<a href="#"
-						 class="btn btn--all"
+						 class="btn btn--brown"
 					>Подробнее</a>
-					<button class="btn btn--bg-blue btn--size-s"
+					<button class="btn btn--blue"
 									type="button"
 					>В избранное
 					</button>
@@ -317,7 +322,7 @@
 			</li>
 			<li class="hotels__item">
 				<img class="hotels__photo"
-						 src="images/hotels/hotel-4.jpg"
+						 src="images/catalog/hotels/hotel-4.jpg"
 						 alt="Пейзаж около гостииницы."
 						 width="300"
 						 height="212"
@@ -329,9 +334,9 @@
 				</p>
 				<div class="hotels__buttons">
 					<a href="#"
-						 class="btn btn--all"
+						 class="btn btn--brown"
 					>Подробнее</a>
-					<button class="btn btn--bg-blue btn--size-s"
+					<button class="btn btn--blue"
 									type="button"
 					>В избранное
 					</button>
@@ -344,9 +349,9 @@
 					<span class="rating__value">Рейтинг: 5,0</span>
 				</p>
 			</li>
-		</ul>
+		</ol>
 		<!-- Hotels pagination -->
-		<ul class="pagination">
+		<ol class="pagination">
 			<li class="pagination__item">
 				<a class="pagination__link active">1</a>
 			</li>
@@ -373,18 +378,13 @@
 					 href="#"
 				>10</a>
 			</li>
-		</ul>
-		<button class="button pagination-show-more"
-						type="button"
-		>Показать ещё
-		</button>
+		</ol>
 	</section>
 	<!-- Section subscription -->
 	<section class="subscription">
 		<header class="section__header">
 			<h2 class="section__title">Подпишитесь на рассылку</h2>
-			<p class="section__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц
-				в Седоне</p>
+			<p class="section__description">Только полезная информация и никакого спама, честное бойскаутское!</p>
 		</header>
 		<form class="subscription__form"
 					action="https://echo.htmlacademy.ru/"
@@ -399,7 +399,7 @@
 						 placeholder="Ваш e-mail*"
 						 required
 			>
-			<button class="btn btn--bg-blue"
+			<button class="btn btn--blue btn--size-l btn--subscribe"
 							type="submit"
 			>Подписаться
 			</button>
@@ -435,7 +435,7 @@
 		 href="tel: 88188121212"
 	>+7 (812) 812-12-12</a>
 	<img class="footer__logo"
-			 src="images/academy-logo.svg"
+			 src="images/components/academy-logo.svg"
 			 alt="Логотип HTML Academy."
 			 width="115"
 			 height="34"
