@@ -66,6 +66,10 @@ body {
     background-color: #756157;
 }
 
+.btn--blue {
+    background-color: #82B3D3;
+}
+
 .btn--size-l {
     font-size: 20px;
     line-height: 36px;
@@ -74,10 +78,6 @@ body {
 
 .btn--subscribe {
     border-radius: 0 4px 4px 0;
-}
-
-.btn--blue {
-    background-color: #82B3D3;
 }
 
 .btn.active {
@@ -137,6 +137,24 @@ body {
 
 .nav__user-side {
     display: flex;
+}
+
+.nav__icon {
+    padding: 20px 22px;
+    transition: opacity 0.2s ease;
+}
+
+.nav__icon:hover {
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+.nav__icon-search {
+    background: url("../images/components/navigation/nav-1.svg") no-repeat center;
+}
+
+.nav__icon-favorites {
+    background: url("../images/components/navigation/nav-2.svg") no-repeat center;
 }
 
 .nav__btn {
