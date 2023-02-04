@@ -431,10 +431,8 @@ body {
     font-weight: 700;
     font-size: 20px;
     line-height: 36px;
-}
-
-.pagination__item + .pagination__item {
-    margin-left: 8px;
+    column-gap: 8px;
+    padding: 0;
 }
 
 .pagination__link {
