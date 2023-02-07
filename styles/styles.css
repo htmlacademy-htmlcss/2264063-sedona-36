@@ -25,19 +25,20 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
     color: #333;
-    margin: 0;
-    height: 100%;
+    margin: 0 auto;
+    min-height: 100%;
+    width: 1200px;
+
 }
 .container {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    max-width: 1230px;
-    min-height: 100%;
+    max-width: 1090px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -101,13 +102,13 @@ body {
 }
 
 /*--- Page Header ---*/
-.page__header {
+.header__container {
     display: flex;
-    padding: 0 70px;
 }
 
 .header__logo {
     margin: 0 30px -6px 0;
+    z-index: 10;
 }
 
 .header__nav {
@@ -124,6 +125,8 @@ body {
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
+    align-items: center;
 }
 
 .nav__link{
@@ -258,6 +261,8 @@ body {
     list-style: none;
     text-align: center;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .benefits__item {
@@ -314,6 +319,8 @@ body {
 /*--- Section Hotel-Search ---*/
 .hotel-search {
     padding: 96px 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .hotel-search .section__header {
@@ -351,10 +358,22 @@ body {
     justify-content: center;
 }
 
+.subscription__input {
+    width: 452px;
+    padding: 0 20px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    font-size: 18px;
+    line-height: 24px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #F2F2F2;
+    outline: none;
+}
+
 /*--- Footer ---*/
-.page__footer {
+.footer__container {
     display: flex;
-    padding: 40px 70px 30px;
+    padding: 40px 0 30px;
     justify-content: space-between;
 }
 
@@ -374,8 +393,7 @@ body {
     background: url("../images/catalog/catalog-filter-bg.jpg") no-repeat center,
                 #756157;
     background-size: cover;
-    padding: 70px;
-    padding-top: 35px;
+    padding: 35px 0 70px;
 }
 
 .catalog__title {

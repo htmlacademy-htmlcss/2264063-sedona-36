@@ -8,9 +8,9 @@
 	>
 </head>
 <body>
-<div class="container">
-	<!-- Page header -->
-	<header class="page__header">
+<!-- Page header -->
+<header class="page__header">
+	<div class="container header__container">
 		<a href="index.html"
 			 class="header__logo"
 		>
@@ -62,10 +62,12 @@
 				 class="btn btn--brown nav__btn"
 			>Хочу сюда!</a>
 		</nav>
-	</header>
-	<!-- Page main -->
-	<main class="main main__catalog">
-		<header class="catalog__header">
+	</div>
+</header>
+<!-- Page main -->
+<main class="main main__catalog">
+	<header class="catalog__header">
+		<div class="container">
 			<h1 class="catalog__title">Гостиницы Седоны</h1>
 			<ul class="breadcrumbs">
 				<li class="breadcrumbs__item">
@@ -199,216 +201,218 @@
 					</div>
 				</form>
 			</section>
-		</header>
-		<!-- Section hotels -->
-		<section class="hotels">
-			<h2 class="visually-hidden">Список гостиниц</h2>
-			<!-- Hotels header -->
-			<header class="hotels__header">
-				<p class="hotels__found-info">Найдено гостиниц: 38</p>
-				<select class="select-control"
-								aria-label="Сортировка"
-				>
-					<option value="cheap">Сначала дешёвые</option>
-					<option value="popular">Сначала популярные</option>
-					<option value="expensive">Сначала дорогие</option>
-				</select>
-				<button class="sort-button active"
-								type="button"
-				>
-					<span class="visually-hidden">Показать карточки</span>
-					<!--		Иконку добавлю через CSS		-->
-				</button>
-				<button class="sort-button"
-								type="button"
-				>
-					<span class="visually-hidden">Показать миниатюры</span>
-					<!--		Иконку добавлю через CSS		-->
-				</button>
-				<button class="sort-button"
-								type="button"
-				>
-					<span class="visually-hidden">Показать список</span>
-					<!--		Иконку добавлю через CSS		-->
-				</button>
-			</header>
-			<!-- Hotels list -->
-			<ol class="hotels__list">
-				<li class="hotels__item">
-					<img class="hotels__photo"
-							 src="images/catalog/hotels/hotel-1.jpg"
-							 alt="Пейзаж около гостииницы."
-							 width="300"
-							 height="212"
-					>
-					<h3 class="hotels__title">Amara Resort & Spa</h3>
-					<p class="hotels__description">
-						<span class="hotels__type">Гостиница</span>
-						<span class="hotels__price">От 4000 ₽</span>
-					</p>
-					<div class="hotels__buttons">
-						<a href="#"
-							 class="btn btn--brown"
-						>Подробнее</a>
-						<button class="btn btn--blue"
-										type="button"
-						>В избранное
-						</button>
-					</div>
-					<p class="hotels__rating">
-						<img src=""
-								 alt="Отель 4 звезды."
-								 class="rating__stars"
-						>
-						<span class="rating__value">Рейтинг: 8,5</span>
-					</p>
-				</li>
-				<li class="hotels__item">
-					<img class="hotels__photo"
-							 src="images/catalog/hotels/hotel-2.jpg"
-							 alt="Пейзаж около гостииницы."
-							 width="300"
-							 height="212"
-					>
-					<h3 class="hotels__title">Villas at Poco Diablo</h3>
-					<p class="hotels__description">
-						<span class="hotels__type">Гостиница</span>
-						<span class="hotels__price">От 5000 ₽</span>
-					</p>
-					<div class="hotels__buttons">
-						<a href="#"
-							 class="btn btn--brown"
-						>Подробнее</a>
-						<button class="btn btn--blue active"
-										type="button"
-						>В избранном
-						</button>
-					</div>
-					<p class="hotels__rating">
-						<img src=""
-								 alt="Отель 4 звезды."
-								 class="rating__stars"
-						>
-						<span class="rating__value">Рейтинг: 9,2</span>
-					</p>
-				</li>
-				<li class="hotels__item">
-					<img class="hotels__photo"
-							 src="images/catalog/hotels/hotel-3.jpg"
-							 alt="Пейзаж около гостииницы."
-							 width="300"
-							 height="212"
-					>
-					<h3 class="hotels__title">Desert Quail Inn</h3>
-					<p class="hotels__description">
-						<span class="hotels__type">Гостиница</span>
-						<span class="hotels__price">От 2500 ₽</span>
-					</p>
-					<div class="hotels__buttons">
-						<a href="#"
-							 class="btn btn--brown"
-						>Подробнее</a>
-						<button class="btn btn--blue"
-										type="button"
-						>В избранное
-						</button>
-					</div>
-					<p class="hotels__rating">
-						<img src=""
-								 alt="Отель 3 звезды."
-								 class="rating__stars"
-						>
-						<span class="rating__value">Рейтинг: 6,9</span>
-					</p>
-				</li>
-				<li class="hotels__item">
-					<img class="hotels__photo"
-							 src="images/catalog/hotels/hotel-4.jpg"
-							 alt="Пейзаж около гостииницы."
-							 width="300"
-							 height="212"
-					>
-					<h3 class="hotels__title">GreenTree Inn</h3>
-					<p class="hotels__description">
-						<span class="hotels__type">Гостиница</span>
-						<span class="hotels__price">От 1500 ₽</span>
-					</p>
-					<div class="hotels__buttons">
-						<a href="#"
-							 class="btn btn--brown"
-						>Подробнее</a>
-						<button class="btn btn--blue"
-										type="button"
-						>В избранное
-						</button>
-					</div>
-					<p class="hotels__rating">
-						<img src=""
-								 alt="Отель 2 звезды."
-								 class="rating__stars"
-						>
-						<span class="rating__value">Рейтинг: 5,0</span>
-					</p>
-				</li>
-			</ol>
-			<!-- Hotels pagination -->
-			<ol class="pagination">
-				<li class="pagination__item">
-					<a class="pagination__link active">1</a>
-				</li>
-				<li class="pagination__item">
-					<a class="pagination__link"
-						 href="#"
-					>2</a>
-				</li>
-				<li class="pagination__item">
-					<a class="pagination__link"
-						 href="#"
-					>3</a>
-				</li>
-				<li class="pagination__item">
-					<a class="pagination__link"
-						 href="#"
-					>4</a>
-				</li>
-				<li class="pagination__item pagination--more">
-					...
-				</li>
-				<li class="pagination__item">
-					<a class="pagination__link"
-						 href="#"
-					>10</a>
-				</li>
-			</ol>
-		</section>
-		<!-- Section subscription -->
-		<section class="subscription">
-			<header class="section__header">
-				<h2 class="section__title">Подпишитесь на рассылку</h2>
-				<p class="section__description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-			</header>
-			<form class="subscription__form"
-						action="https://echo.htmlacademy.ru/"
-						method="post"
+		</div>
+	</header>
+	<!-- Section hotels -->
+	<section class="hotels">
+		<h2 class="visually-hidden">Список гостиниц</h2>
+		<!-- Hotels header -->
+		<header class="hotels__header">
+			<p class="hotels__found-info">Найдено гостиниц: 38</p>
+			<select class="select-control"
+							aria-label="Сортировка"
 			>
-				<label class="visually-hidden"
-							 for="subscription__input"
-				>Поле для ввода email</label>
-				<input class="subscription__input"
-							 id="subscription__input"
-							 type="email"
-							 placeholder="Ваш e-mail*"
-							 required
+				<option value="cheap">Сначала дешёвые</option>
+				<option value="popular">Сначала популярные</option>
+				<option value="expensive">Сначала дорогие</option>
+			</select>
+			<button class="sort-button active"
+							type="button"
+			>
+				<span class="visually-hidden">Показать карточки</span>
+				<!--		Иконку добавлю через CSS		-->
+			</button>
+			<button class="sort-button"
+							type="button"
+			>
+				<span class="visually-hidden">Показать миниатюры</span>
+				<!--		Иконку добавлю через CSS		-->
+			</button>
+			<button class="sort-button"
+							type="button"
+			>
+				<span class="visually-hidden">Показать список</span>
+				<!--		Иконку добавлю через CSS		-->
+			</button>
+		</header>
+		<!-- Hotels list -->
+		<ol class="hotels__list">
+			<li class="hotels__item">
+				<img class="hotels__photo"
+						 src="images/catalog/hotels/hotel-1.jpg"
+						 alt="Пейзаж около гостииницы."
+						 width="300"
+						 height="212"
 				>
-				<button class="btn btn--blue btn--size-l btn--subscribe"
-								type="submit"
-				>Подписаться
-				</button>
-			</form>
-		</section>
-	</main>
-	<!-- Page footer -->
-	<footer class="page__footer">
+				<h3 class="hotels__title">Amara Resort & Spa</h3>
+				<p class="hotels__description">
+					<span class="hotels__type">Гостиница</span>
+					<span class="hotels__price">От 4000 ₽</span>
+				</p>
+				<div class="hotels__buttons">
+					<a href="#"
+						 class="btn btn--brown"
+					>Подробнее</a>
+					<button class="btn btn--blue"
+									type="button"
+					>В избранное
+					</button>
+				</div>
+				<p class="hotels__rating">
+					<img src=""
+							 alt="Отель 4 звезды."
+							 class="rating__stars"
+					>
+					<span class="rating__value">Рейтинг: 8,5</span>
+				</p>
+			</li>
+			<li class="hotels__item">
+				<img class="hotels__photo"
+						 src="images/catalog/hotels/hotel-2.jpg"
+						 alt="Пейзаж около гостииницы."
+						 width="300"
+						 height="212"
+				>
+				<h3 class="hotels__title">Villas at Poco Diablo</h3>
+				<p class="hotels__description">
+					<span class="hotels__type">Гостиница</span>
+					<span class="hotels__price">От 5000 ₽</span>
+				</p>
+				<div class="hotels__buttons">
+					<a href="#"
+						 class="btn btn--brown"
+					>Подробнее</a>
+					<button class="btn btn--blue active"
+									type="button"
+					>В избранном
+					</button>
+				</div>
+				<p class="hotels__rating">
+					<img src=""
+							 alt="Отель 4 звезды."
+							 class="rating__stars"
+					>
+					<span class="rating__value">Рейтинг: 9,2</span>
+				</p>
+			</li>
+			<li class="hotels__item">
+				<img class="hotels__photo"
+						 src="images/catalog/hotels/hotel-3.jpg"
+						 alt="Пейзаж около гостииницы."
+						 width="300"
+						 height="212"
+				>
+				<h3 class="hotels__title">Desert Quail Inn</h3>
+				<p class="hotels__description">
+					<span class="hotels__type">Гостиница</span>
+					<span class="hotels__price">От 2500 ₽</span>
+				</p>
+				<div class="hotels__buttons">
+					<a href="#"
+						 class="btn btn--brown"
+					>Подробнее</a>
+					<button class="btn btn--blue"
+									type="button"
+					>В избранное
+					</button>
+				</div>
+				<p class="hotels__rating">
+					<img src=""
+							 alt="Отель 3 звезды."
+							 class="rating__stars"
+					>
+					<span class="rating__value">Рейтинг: 6,9</span>
+				</p>
+			</li>
+			<li class="hotels__item">
+				<img class="hotels__photo"
+						 src="images/catalog/hotels/hotel-4.jpg"
+						 alt="Пейзаж около гостииницы."
+						 width="300"
+						 height="212"
+				>
+				<h3 class="hotels__title">GreenTree Inn</h3>
+				<p class="hotels__description">
+					<span class="hotels__type">Гостиница</span>
+					<span class="hotels__price">От 1500 ₽</span>
+				</p>
+				<div class="hotels__buttons">
+					<a href="#"
+						 class="btn btn--brown"
+					>Подробнее</a>
+					<button class="btn btn--blue"
+									type="button"
+					>В избранное
+					</button>
+				</div>
+				<p class="hotels__rating">
+					<img src=""
+							 alt="Отель 2 звезды."
+							 class="rating__stars"
+					>
+					<span class="rating__value">Рейтинг: 5,0</span>
+				</p>
+			</li>
+		</ol>
+		<!-- Hotels pagination -->
+		<ol class="pagination">
+			<li class="pagination__item">
+				<a class="pagination__link active">1</a>
+			</li>
+			<li class="pagination__item">
+				<a class="pagination__link"
+					 href="#"
+				>2</a>
+			</li>
+			<li class="pagination__item">
+				<a class="pagination__link"
+					 href="#"
+				>3</a>
+			</li>
+			<li class="pagination__item">
+				<a class="pagination__link"
+					 href="#"
+				>4</a>
+			</li>
+			<li class="pagination__item pagination--more">
+				...
+			</li>
+			<li class="pagination__item">
+				<a class="pagination__link"
+					 href="#"
+				>10</a>
+			</li>
+		</ol>
+	</section>
+	<!-- Section subscription -->
+	<section class="subscription">
+		<header class="section__header">
+			<h2 class="section__title">Подпишитесь на рассылку</h2>
+			<p class="section__description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+		</header>
+		<form class="subscription__form"
+					action="https://echo.htmlacademy.ru/"
+					method="post"
+		>
+			<label class="visually-hidden"
+						 for="subscription__input"
+			>Поле для ввода email</label>
+			<input class="subscription__input"
+						 id="subscription__input"
+						 type="email"
+						 placeholder="Ваш e-mail*"
+						 required
+			>
+			<button class="btn btn--blue btn--size-l btn--subscribe"
+							type="submit"
+			>Подписаться
+			</button>
+		</form>
+	</section>
+</main>
+<!-- Page footer -->
+<footer class="page__footer">
+	<div class="container footer__container">
 		<section class="social">
 			<a href="#"
 				 class="social__item"
@@ -441,7 +445,7 @@
 				 width="115"
 				 height="34"
 		>
-	</footer>
-</div>
+	</div>
+</footer>
 </body>
 </html>
