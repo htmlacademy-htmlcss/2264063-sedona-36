@@ -23,7 +23,7 @@
 		</a>
 		<nav class="header__nav">
 			<ul class="nav__list">
-				<li class="nav__item active">
+				<li class="nav__item">
 					<a href="index.html"
 						 class="nav__link"
 					>Главная</a>
@@ -35,32 +35,32 @@
 				</li>
 				<li class="nav__item">
 					<a href="catalog.html"
-						 class="nav__link"
+						 class="nav__link active"
 					>Гостиницы</a>
 				</li>
 			</ul>
-			<ul class="nav__list nav__list--user-nav">
-				<li class="nav__item">
-					<a href="#"
-						 class="nav__link"
-					>
-						<span class="visually-hidden">Поиск</span>
-						<!--		иконку добавлю через CSS		-->
-					</a>
-				</li>
-				<li class="nav__item">
-					<a href="#"
-						 class="nav__link"
-					>
-						<span class="visually-hidden">Избранное</span>
-						<!--		иконку добавлю через CSS		-->
-						<span class="liked-count">12</span>
-					</a>
-				</li>
-			</ul>
-			<a href="#"
-				 class="btn btn--brown nav__btn"
-			>Хочу сюда!</a>
+			<div class="nav__user-side">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#"
+							 class="nav__icon nav__icon-search"
+						>
+							<span class="visually-hidden">Поиск</span>
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#"
+							 class="nav__icon nav__icon-favorites"
+						>
+							<span class="visually-hidden">Избранное</span>
+						</a>
+						<!--						<span class="liked-count">12</span>-->
+					</li>
+				</ul>
+				<a href="#"
+					 class="btn btn--brown nav__btn"
+				>Хочу сюда!</a>
+			</div>
 		</nav>
 	</div>
 </header>
@@ -205,184 +205,196 @@
 	</header>
 	<!-- Section hotels -->
 	<section class="hotels">
-		<h2 class="visually-hidden">Список гостиниц</h2>
-		<!-- Hotels header -->
-		<header class="hotels__header">
-			<p class="hotels__found-info">Найдено гостиниц: 38</p>
-			<select class="select-control"
-							aria-label="Сортировка"
-			>
-				<option value="cheap">Сначала дешёвые</option>
-				<option value="popular">Сначала популярные</option>
-				<option value="expensive">Сначала дорогие</option>
-			</select>
-			<button class="sort-button active"
-							type="button"
-			>
-				<span class="visually-hidden">Показать карточки</span>
-				<!--		Иконку добавлю через CSS		-->
-			</button>
-			<button class="sort-button"
-							type="button"
-			>
-				<span class="visually-hidden">Показать миниатюры</span>
-				<!--		Иконку добавлю через CSS		-->
-			</button>
-			<button class="sort-button"
-							type="button"
-			>
-				<span class="visually-hidden">Показать список</span>
-				<!--		Иконку добавлю через CSS		-->
-			</button>
-		</header>
-		<!-- Hotels list -->
-		<ol class="hotels__list">
-			<li class="hotels__item">
-				<img class="hotels__photo"
-						 src="images/catalog/hotels/hotel-1.jpg"
-						 alt="Пейзаж около гостииницы."
-						 width="300"
-						 height="212"
-				>
-				<h3 class="hotels__title">Amara Resort & Spa</h3>
-				<p class="hotels__description">
-					<span class="hotels__type">Гостиница</span>
-					<span class="hotels__price">От 4000 ₽</span>
-				</p>
-				<div class="hotels__buttons">
-					<a href="#"
-						 class="btn btn--brown"
-					>Подробнее</a>
-					<button class="btn btn--blue"
-									type="button"
-					>В избранное
-					</button>
-				</div>
-				<p class="hotels__rating">
-					<img src=""
-							 alt="Отель 4 звезды."
-							 class="rating__stars"
+		<div class="container">
+			<h2 class="visually-hidden">Список гостиниц</h2>
+			<!-- Hotels header -->
+			<header class="hotels__header">
+				<p class="hotels__found-info">Найдено гостиниц: 38</p>
+				<div class="hotel__filter-buttons">
+					<select class="select-control"
+									aria-label="Сортировка"
 					>
-					<span class="rating__value">Рейтинг: 8,5</span>
-				</p>
-			</li>
-			<li class="hotels__item">
-				<img class="hotels__photo"
-						 src="images/catalog/hotels/hotel-2.jpg"
-						 alt="Пейзаж около гостииницы."
-						 width="300"
-						 height="212"
-				>
-				<h3 class="hotels__title">Villas at Poco Diablo</h3>
-				<p class="hotels__description">
-					<span class="hotels__type">Гостиница</span>
-					<span class="hotels__price">От 5000 ₽</span>
-				</p>
-				<div class="hotels__buttons">
-					<a href="#"
-						 class="btn btn--brown"
-					>Подробнее</a>
-					<button class="btn btn--blue active"
-									type="button"
-					>В избранном
-					</button>
+						<option value="cheap">Сначала дешёвые</option>
+						<option value="popular">Сначала популярные</option>
+						<option value="expensive">Сначала дорогие</option>
+					</select>
+					<ul class="sort-button__list">
+						<li class="sort-button__item">
+							<button class="sort-button active"
+											type="button"
+							>
+								<span class="visually-hidden">Показать карточки</span>
+								<!--		Иконку добавлю через CSS		-->
+							</button>
+						</li>
+						<li class="sort-button__item">
+							<button class="sort-button"
+											type="button"
+							>
+								<span class="visually-hidden">Показать миниатюры</span>
+								<!--		Иконку добавлю через CSS		-->
+							</button>
+						</li>
+						<li class="sort-button__item">
+							<button class="sort-button"
+											type="button"
+							>
+								<span class="visually-hidden">Показать список</span>
+								<!--		Иконку добавлю через CSS		-->
+							</button>
+						</li>
+					</ul>
 				</div>
-				<p class="hotels__rating">
-					<img src=""
-							 alt="Отель 4 звезды."
-							 class="rating__stars"
+			</header>
+			<!-- Hotels list -->
+			<ol class="hotels__list">
+				<li class="hotels__item">
+					<img class="hotels__photo"
+							 src="images/catalog/hotels/hotel-1.jpg"
+							 alt="Пейзаж около гостииницы."
+							 width="300"
+							 height="212"
 					>
-					<span class="rating__value">Рейтинг: 9,2</span>
-				</p>
-			</li>
-			<li class="hotels__item">
-				<img class="hotels__photo"
-						 src="images/catalog/hotels/hotel-3.jpg"
-						 alt="Пейзаж около гостииницы."
-						 width="300"
-						 height="212"
-				>
-				<h3 class="hotels__title">Desert Quail Inn</h3>
-				<p class="hotels__description">
-					<span class="hotels__type">Гостиница</span>
-					<span class="hotels__price">От 2500 ₽</span>
-				</p>
-				<div class="hotels__buttons">
-					<a href="#"
-						 class="btn btn--brown"
-					>Подробнее</a>
-					<button class="btn btn--blue"
-									type="button"
-					>В избранное
-					</button>
-				</div>
-				<p class="hotels__rating">
-					<img src=""
-							 alt="Отель 3 звезды."
-							 class="rating__stars"
+					<h3 class="hotels__title">Amara Resort & Spa</h3>
+					<p class="hotels__description">
+						<span class="hotels__type">Гостиница</span>
+						<span class="hotels__price">От 4000 ₽</span>
+					</p>
+					<div class="hotels__buttons">
+						<a href="#"
+							 class="btn btn--brown"
+						>Подробнее</a>
+						<button class="btn btn--blue"
+										type="button"
+						>В избранное
+						</button>
+					</div>
+					<p class="hotels__rating">
+						<img src=""
+								 alt="Отель 4 звезды."
+								 class="rating__stars"
+						>
+						<span class="rating__value">Рейтинг: 8,5</span>
+					</p>
+				</li>
+				<li class="hotels__item">
+					<img class="hotels__photo"
+							 src="images/catalog/hotels/hotel-2.jpg"
+							 alt="Пейзаж около гостииницы."
+							 width="300"
+							 height="212"
 					>
-					<span class="rating__value">Рейтинг: 6,9</span>
-				</p>
-			</li>
-			<li class="hotels__item">
-				<img class="hotels__photo"
-						 src="images/catalog/hotels/hotel-4.jpg"
-						 alt="Пейзаж около гостииницы."
-						 width="300"
-						 height="212"
-				>
-				<h3 class="hotels__title">GreenTree Inn</h3>
-				<p class="hotels__description">
-					<span class="hotels__type">Гостиница</span>
-					<span class="hotels__price">От 1500 ₽</span>
-				</p>
-				<div class="hotels__buttons">
-					<a href="#"
-						 class="btn btn--brown"
-					>Подробнее</a>
-					<button class="btn btn--blue"
-									type="button"
-					>В избранное
-					</button>
-				</div>
-				<p class="hotels__rating">
-					<img src=""
-							 alt="Отель 2 звезды."
-							 class="rating__stars"
+					<h3 class="hotels__title">Villas at Poco Diablo</h3>
+					<p class="hotels__description">
+						<span class="hotels__type">Гостиница</span>
+						<span class="hotels__price">От 5000 ₽</span>
+					</p>
+					<div class="hotels__buttons">
+						<a href="#"
+							 class="btn btn--brown"
+						>Подробнее</a>
+						<button class="btn btn--blue active"
+										type="button"
+						>В избранном
+						</button>
+					</div>
+					<p class="hotels__rating">
+						<img src=""
+								 alt="Отель 4 звезды."
+								 class="rating__stars"
+						>
+						<span class="rating__value">Рейтинг: 9,2</span>
+					</p>
+				</li>
+				<li class="hotels__item">
+					<img class="hotels__photo"
+							 src="images/catalog/hotels/hotel-3.jpg"
+							 alt="Пейзаж около гостииницы."
+							 width="300"
+							 height="212"
 					>
-					<span class="rating__value">Рейтинг: 5,0</span>
-				</p>
-			</li>
-		</ol>
-		<!-- Hotels pagination -->
-		<ol class="pagination">
-			<li class="pagination__item">
-				<a class="pagination__link active">1</a>
-			</li>
-			<li class="pagination__item">
-				<a class="pagination__link"
-					 href="#"
-				>2</a>
-			</li>
-			<li class="pagination__item">
-				<a class="pagination__link"
-					 href="#"
-				>3</a>
-			</li>
-			<li class="pagination__item">
-				<a class="pagination__link"
-					 href="#"
-				>4</a>
-			</li>
-			<li class="pagination__item pagination--more">
-				...
-			</li>
-			<li class="pagination__item">
-				<a class="pagination__link"
-					 href="#"
-				>10</a>
-			</li>
-		</ol>
+					<h3 class="hotels__title">Desert Quail Inn</h3>
+					<p class="hotels__description">
+						<span class="hotels__type">Гостиница</span>
+						<span class="hotels__price">От 2500 ₽</span>
+					</p>
+					<div class="hotels__buttons">
+						<a href="#"
+							 class="btn btn--brown"
+						>Подробнее</a>
+						<button class="btn btn--blue"
+										type="button"
+						>В избранное
+						</button>
+					</div>
+					<p class="hotels__rating">
+						<img src=""
+								 alt="Отель 3 звезды."
+								 class="rating__stars"
+						>
+						<span class="rating__value">Рейтинг: 6,9</span>
+					</p>
+				</li>
+				<li class="hotels__item">
+					<img class="hotels__photo"
+							 src="images/catalog/hotels/hotel-4.jpg"
+							 alt="Пейзаж около гостииницы."
+							 width="300"
+							 height="212"
+					>
+					<h3 class="hotels__title">GreenTree Inn</h3>
+					<p class="hotels__description">
+						<span class="hotels__type">Гостиница</span>
+						<span class="hotels__price">От 1500 ₽</span>
+					</p>
+					<div class="hotels__buttons">
+						<a href="#"
+							 class="btn btn--brown"
+						>Подробнее</a>
+						<button class="btn btn--blue"
+										type="button"
+						>В избранное
+						</button>
+					</div>
+					<p class="hotels__rating">
+						<img src=""
+								 alt="Отель 2 звезды."
+								 class="rating__stars"
+						>
+						<span class="rating__value">Рейтинг: 5,0</span>
+					</p>
+				</li>
+			</ol>
+			<!-- Hotels pagination -->
+			<ol class="pagination">
+				<li class="pagination__item">
+					<a class="pagination__link active">1</a>
+				</li>
+				<li class="pagination__item">
+					<a class="pagination__link"
+						 href="#"
+					>2</a>
+				</li>
+				<li class="pagination__item">
+					<a class="pagination__link"
+						 href="#"
+					>3</a>
+				</li>
+				<li class="pagination__item">
+					<a class="pagination__link"
+						 href="#"
+					>4</a>
+				</li>
+				<li class="pagination__item pagination--more">
+					...
+				</li>
+				<li class="pagination__item">
+					<a class="pagination__link"
+						 href="#"
+					>10</a>
+				</li>
+			</ol>
+		</div>
 	</section>
 	<!-- Section subscription -->
 	<section class="subscription">
