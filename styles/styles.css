@@ -20,15 +20,24 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
     color: #333;
+    margin: 0;
+    height: 100%;
 }
 .container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1230px;
+    min-height: 100%;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -86,6 +95,9 @@ body {
 
 .btn.active {
     background-color: #7DB54F;
+}
+.main {
+    flex-grow: 1;
 }
 
 /*--- Page Header ---*/
@@ -169,10 +181,9 @@ body {
 /*--- Intro ---*/
 .intro {
     background:
-            url("../images/index/intro/intro-bg-mask.svg") no-repeat bottom,
-            url("../images/index/intro/intro-bg.jpg") no-repeat center,
+            url("../images/index/intro/intro-bg-mask.svg") no-repeat bottom / 100% auto,
+            url("../images/index/intro/intro-bg.jpg") no-repeat center /cover,
             #c0695b;
-    background-size: 100% auto;
     padding: 51px 0 82px;
 }
 
