@@ -405,6 +405,7 @@ body {
     font-weight: 700;
     font-size: 60px;
     line-height: 78px;
+    margin: 0;
 }
 
 .breadcrumbs {
@@ -434,6 +435,17 @@ body {
     padding: 0;
 }
 
+.filter__group {
+    min-width: 150px;
+    padding: 0;
+    margin-right: 70px;
+}
+
+.filter__group--cost {
+    width: 288px;
+    margin-left: auto;
+}
+
 .control {
     line-height: 23px;
 }
@@ -444,6 +456,12 @@ body {
     font-size: 18px;
     line-height: 24px;
     color: #000;
+}
+
+.filter__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 191px;
 }
 
 /*--- Section Hotels ---*/
