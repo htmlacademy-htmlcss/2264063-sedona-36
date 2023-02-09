@@ -36,6 +36,7 @@ body {
     width: 1200px;
 
 }
+
 .container {
     width: 100%;
     max-width: 1090px;
@@ -97,6 +98,7 @@ body {
 .btn.active {
     background-color: #7DB54F;
 }
+
 .main {
     flex-grow: 1;
 }
@@ -129,7 +131,7 @@ body {
     align-items: center;
 }
 
-.nav__link{
+.nav__link {
     text-align: center;
     color: #000;
     text-decoration: none;
@@ -188,10 +190,9 @@ body {
 
 /*--- Intro ---*/
 .intro {
-    background:
-            url("../images/index/intro/intro-bg-mask.svg") no-repeat bottom / 100% auto,
-            url("../images/index/intro/intro-bg.jpg") no-repeat center /cover,
-            #c0695b;
+    background: url("../images/index/intro/intro-bg-mask.svg") no-repeat bottom / 100% auto,
+    url("../images/index/intro/intro-bg.jpg") no-repeat center /cover,
+    #c0695b;
     padding: 51px 0 82px;
 }
 
@@ -345,7 +346,7 @@ body {
 
 .subscription--index {
     background: url("../images/index/subscription-bg.jpg") no-repeat center,
-                #756157;
+    #756157;
     background-size: cover;
 }
 
@@ -376,7 +377,7 @@ body {
 }
 
 .subscription__input--shadow {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /*--- Footer ---*/
@@ -400,7 +401,7 @@ body {
 .catalog__header {
     color: #fff;
     background: url("../images/catalog/catalog-filter-bg.jpg") no-repeat center,
-                #756157;
+    #756157;
     background-size: cover;
     padding: 35px 0 70px;
 }
@@ -474,6 +475,7 @@ body {
     align-items: center;
     padding: 50px 0 40px;
 }
+
 .hotel__filter-buttons {
     margin-left: auto;
     display: flex;
@@ -495,6 +497,7 @@ body {
     line-height: 21px;
     margin-right: 70px;
 }
+
 .sort-button__list {
     display: flex;
     padding: 0;
