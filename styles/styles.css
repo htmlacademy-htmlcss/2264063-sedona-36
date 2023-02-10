@@ -410,13 +410,15 @@ body {
     font-weight: 700;
     font-size: 60px;
     line-height: 78px;
-    margin: 0;
+    margin: 0 0 8px 0;
 }
 
 .breadcrumbs {
     display: flex;
     list-style: none;
     font-size: 16px;
+    padding: 0;
+    margin: 0 0 40px 0;
 }
 
 /*--- Section Filter ---*/
@@ -453,10 +455,15 @@ body {
     row-gap: 16px;
 }
 
+.filter__list--inputs {
+    row-gap: 36px;
+}
+
 .filter__item--inputs {
     display: flex;
     column-gap: 2px;
 }
+
 .field {
     flex-basis: 50%;
 }
@@ -527,17 +534,23 @@ body {
 }
 
 /*--- Hotels List ---*/
+.hotels {
+    padding-bottom: 60px;
+}
+
 .hotels__list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0 0 40px 0;
+    margin: 0 0 40px 0;
+    border-bottom: 1px solid #E6E6E6;
 }
 
 .hotels__item {
     border: 1px solid #E6E6E6;
+    border-radius: 4px;
     padding: 20px;
     flex: 0 0 340px;
     display: flex;
@@ -594,6 +607,7 @@ body {
     line-height: 36px;
     column-gap: 8px;
     padding: 0;
+    margin: 0;
 }
 
 .pagination__link {
