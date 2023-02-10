@@ -232,7 +232,7 @@ body {
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 0 85px;
+    padding: 20px 85px;
     flex-grow: 1;
 }
 
@@ -270,6 +270,11 @@ body {
 .benefits__item {
     display: flex;
     flex: 1 0 400px;
+}
+
+.benefits__img {
+    height: 100%;
+    object-fit: cover;
 }
 
 .benefits__item:first-of-type,
@@ -493,7 +498,7 @@ body {
 .filter__buttons {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    padding-top: 56px;
     row-gap: 32px;
     width: 191px;
 }
