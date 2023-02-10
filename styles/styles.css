@@ -518,7 +518,17 @@ body {
 .hotels__item {
     border: 1px solid #E6E6E6;
     padding: 20px;
-    width: 340px;
+    flex: 0 0 340px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.hotels__photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 .hotels__title {
@@ -526,12 +536,32 @@ body {
     font-size: 24px;
     line-height: 28px;
     color: #000;
+    margin: 0;
+}
+
+.hotels__description,
+.hotels__rating,
+.hotels__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    column-gap: 20px;
+}
+
+.hotels__buttons .btn,
+.hotels__rating > * {
+    flex: 1 1 50%;
 }
 
 .rating__value {
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+    text-align: center;
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    padding: 9px 0;
 }
 
 /*--- Pagination ---*/
