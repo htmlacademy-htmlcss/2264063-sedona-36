@@ -488,10 +488,12 @@ body {
     padding: 12px 20px;
     border: none;
 }
+
 .field__input--start {
     border-radius: 4px 0 0 4px;
 }
-.field__input--end{
+
+.field__input--end {
     border-radius: 0 4px 4px 0;
 }
 
@@ -545,8 +547,8 @@ body {
 }
 
 .hotels__list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     list-style: none;
     padding: 0 0 40px 0;
@@ -559,9 +561,16 @@ body {
     border-radius: 4px;
     padding: 20px;
     flex: 0 0 340px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 138.9px);
+    grid-template-areas:
+                'photo photo'
+                'title title'
+                'type price'
+                'btn-more btn-favor'
+                'stars rating';
+    gap: 16px 20px;
+    align-items: center;
 }
 
 .hotels__photo {
@@ -569,6 +578,7 @@ body {
     height: auto;
     object-fit: cover;
     object-position: center;
+    grid-area: photo;
 }
 
 .hotels__title {
@@ -577,21 +587,28 @@ body {
     line-height: 28px;
     color: #000;
     margin: 0;
+    grid-area: title;
 }
 
-.hotels__description,
-.hotels__rating,
-.hotels__buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    column-gap: 20px;
+.hotels__type {
+    grid-area: type;
 }
 
-.hotels__buttons .btn,
-.hotels__rating > * {
-    flex: 1 1 50%;
+.hotels__price {
+    grid-area: price;
+    justify-self: end;
+}
+
+.btn--more {
+    grid-area: btn-more;
+}
+
+.btn--favor {
+    grid-area: btn-favor;
+}
+
+.rating__stars {
+    grid-area: stars;
 }
 
 .rating__value {
@@ -602,6 +619,7 @@ body {
     background-color: #F2F2F2;
     border-radius: 4px;
     padding: 9px 0;
+    grid-area: rating;
 }
 
 /*--- Pagination ---*/
