@@ -562,7 +562,7 @@ body {
     padding: 20px;
     flex: 0 0 340px;
     display: grid;
-    grid-template-columns: repeat(2, 138.9px);
+    grid-template-columns: repeat(2, 140px);
     grid-template-areas:
                 'photo photo'
                 'title title'
