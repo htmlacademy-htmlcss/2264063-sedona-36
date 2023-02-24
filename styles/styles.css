@@ -181,6 +181,24 @@ body {
 
 .nav__icon-favorites {
     background: url("../images/components/navigation/nav-2.svg") no-repeat center;
+    position: relative;
+}
+
+.liked-count {
+    position: absolute;
+    top: 12px;
+    right: 4px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #7DB54F;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
 }
 
 .nav__btn {
