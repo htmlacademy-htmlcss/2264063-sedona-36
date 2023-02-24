@@ -194,6 +194,7 @@ body {
 .header__logo {
     margin: 0 30px -6px 0;
     z-index: 10;
+    display: block;
 }
 
 .header__logo:focus-visible {
@@ -646,16 +647,23 @@ body {
 
 .breadcrumbs__item:not(:last-of-type)::after {
     content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' width='8' height='11' viewBox='0 0 8 11'> <path fill='white' d='M7 5 2.1.7C1.9.5 1.4.5 1 .7c-.3.3-.2.8 0 1l4.2 3.8-4 3.7c-.3.3-.3.8 0 1 0 .1.3.3.5.3l.5-.3L6.9 6c.4-.3.4-.8 0-1Z'/> </svg>");
-    margin: 0 6px;
+    margin: 0 5px 0 1px;
 }
 
 .breadcrumbs__item:not(:last-of-type):hover {
     color: #FFFFFF99;
 }
 
-.breadcrumbs__link:focus {
+.breadcrumbs__link:focus-visible {
     outline: 3px solid #68A2CA;
     border-radius: 4px;
+}
+
+@supports not selector(:focus-visible) {
+    .breadcrumbs__link:focus {
+        outline: 3px solid #68A2CA;
+        border-radius: 4px;
+    }
 }
 
 .breadcrumbs__item:not(:last-of-type):active {
@@ -685,6 +693,7 @@ body {
     line-height: 24px;
     text-transform: capitalize;
     margin-bottom: 32px;
+    padding: 0;
 }
 
 .filter__list {
@@ -697,7 +706,7 @@ body {
 }
 
 .filter__list--price {
-    row-gap: 36px;
+    row-gap: 43px;
 }
 
 .filter__item--price {
@@ -716,7 +725,7 @@ body {
     line-height: 24px;
     color: #000;
     width: 100%;
-    padding: 12px 20px;
+    padding: 10px 20px;
     border: none;
 }
 
@@ -911,7 +920,7 @@ body {
 
 .select-wrapper {
     position: relative;
-    margin-right: 70px;
+    margin-right: 71px;
 }
 
 .select-wrapper::after {
@@ -1002,9 +1011,10 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 340px);
     gap: 20px;
+    row-gap: 18px;
     list-style: none;
-    padding: 0 0 40px 0;
-    margin: 0 0 40px 0;
+    padding: 0 0 38px 0;
+    margin: 0 0 38px 0;
     border-bottom: 1px solid #E6E6E6;
 }
 
