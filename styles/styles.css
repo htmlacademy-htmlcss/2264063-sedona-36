@@ -566,6 +566,7 @@ body {
     margin: 0 0 8px 0;
 }
 
+/*--- Breadcrumbs ---*/
 .breadcrumbs {
     display: flex;
     list-style: none;
@@ -583,19 +584,20 @@ body {
 .breadcrumbs__icon {
     fill: #fff;
 }
+
 .breadcrumbs__item:not(:last-of-type)::after {
     content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' width='8' height='11'> <path fill='white' d='M7 5 2.1.7C1.9.5 1.4.5 1 .7c-.3.3-.2.8 0 1l4.2 3.8-4 3.7c-.3.3-.3.8 0 1 0 .1.3.3.5.3l.5-.3L6.9 6c.4-.3.4-.8 0-1Z'/> </svg>");
     margin: 0 6px;
 }
 
 .breadcrumbs__item:hover .breadcrumbs__icon,
-.breadcrumbs__item:not(:last-of-type):hover .breadcrumbs__link{
+.breadcrumbs__item:not(:last-of-type):hover .breadcrumbs__link {
     fill: #FFFFFF99;
     color: #FFFFFF99;
 }
 
 .breadcrumbs__item:active .breadcrumbs__icon,
-.breadcrumbs__item:not(:last-of-type):active .breadcrumbs__link{
+.breadcrumbs__item:not(:last-of-type):active .breadcrumbs__link {
     fill: #FFFFFF4C;
     color: #FFFFFF4C;
 }
@@ -705,6 +707,7 @@ body {
     margin: 0;
 }
 
+/*--- Select ---*/
 .select-control {
     font-family: inherit;
     font-size: 18px;
@@ -712,12 +715,43 @@ body {
     margin-right: 70px;
 }
 
+/*--- Sort Button ---*/
 .sort-button__list {
     display: flex;
     padding: 0;
     margin: 0;
     list-style: none;
+    column-gap: 8px;
 }
+
+.sort-button {
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 0.1s ease;
+    outline: none;
+}
+.sort-button:hover {
+    border-color: #000;
+    transition: border-color 0.1s ease;
+}
+
+.sort-button:focus-visible {
+    border-color: #68A2CA;
+}
+
+.sort-button.active {
+    border-color: #000;
+    transition: border-color 0.1s ease;
+}
+
+.sort-button__icon {
+    fill: #000;
+}
+
 
 /*--- Hotels List ---*/
 .hotels {
@@ -726,7 +760,7 @@ body {
 
 .hotels__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 340px);
     gap: 20px;
     list-style: none;
     padding: 0 0 40px 0;
