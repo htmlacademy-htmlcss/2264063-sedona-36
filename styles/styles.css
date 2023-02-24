@@ -856,6 +856,25 @@ body {
     color: #fff;
     background-color: #82B3D3;
     text-decoration: none;
+    outline: none;
+    transition: background-color 0.1s ease;
+}
+
+.pagination__item:focus-within .pagination__link:not(.active) {
+    background-color: #68A2CA;
+    border: 1px solid #82B3D3;
+}
+
+.pagination__item:hover .pagination__link:not(.active) {
+    background-color: #68A2CA;
+    border: 1px solid #82B3D3;
+    transition: background-color 0.1s ease;
+}
+.pagination__item:active .pagination__link:not(.active) {
+    background-color: #82B3D3;
+    border: none;
+    color: #FFFFFF4C;
+    transition: background-color 0.1s ease;
 }
 
 .pagination__link.active {
