@@ -122,18 +122,15 @@ body {
     color: #FFFFFFB2;
 }
 
-.btn--transparent:focus {
+.btn--transparent:focus-visible {
     color: #fff;
     outline: 3px solid #83B3D3;
 }
 
-@supports selector(:focus-visible) {
+@supports not selector(:focus-visible) {
 
     .btn--transparent:focus {
-        outline: none;
-    }
-
-    .btn--transparent:focus-visible {
+        color: #fff;
         outline: 3px solid #83B3D3;
     }
 }
@@ -502,21 +499,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #83B3D3;
+    transition: color 0.1s ease;
 }
 
-.social__icon {
-    fill: #83B3D3;
-    transition: fill 0.1s ease;
+.social__item:hover {
+    color: #68A2CA;
+    transition: color 0.1s ease;
 }
 
-.social__item:hover .social__icon {
-    fill: #68A2CA;
-    transition: fill 0.1s ease;
-}
-
-.social__item:active .social__icon {
-    fill: #68A2CA4C;
-    transition: fill 0.1s ease;
+.social__item:active {
+    color: #68A2CA4C;
+    transition: color 0.1s ease;
 }
 
 .footer__tel {
@@ -524,9 +518,9 @@ body {
     line-height: 40px;
     text-transform: uppercase;
     text-align: center;
-    color: #000;
+    color: inherit;
     text-decoration: none;
-    transition: fill 0.1s ease;
+    transition: color 0.1s ease;
 }
 
 .footer__tel:hover {
@@ -543,21 +537,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: inherit;
+    transition: color 0.1s ease;
 }
 
-.footer__logo-svg {
-    fill: #000;
-    transition: fill 0.1s ease;
+.footer__logo:hover {
+    color: #756157;
+    transition: color 0.1s ease;
 }
 
-.footer__logo:hover .footer__logo-svg {
-    fill: #756157;
-    transition: fill 0.1s ease;
-}
-
-.footer__logo:active .footer__logo-svg {
-    fill: #7561574C;
-    transition: fill 0.1s ease;
+.footer__logo:active {
+    color: #7561574C;
+    transition: color 0.1s ease;
 }
 
 /*=============== CATALOG ===============*/
@@ -589,11 +580,7 @@ body {
 .breadcrumbs__link {
     text-decoration: none;
     padding: 5px;
-    color: #fff;
-}
-
-.breadcrumbs__icon {
-    fill: #fff;
+    color: inherit;
 }
 
 .breadcrumbs__item:not(:last-of-type)::after {
@@ -601,15 +588,11 @@ body {
     margin: 0 6px;
 }
 
-.breadcrumbs__item:hover .breadcrumbs__icon,
-.breadcrumbs__item:not(:last-of-type):hover .breadcrumbs__link {
-    fill: #FFFFFF99;
+.breadcrumbs__item:not(:last-of-type):hover {
     color: #FFFFFF99;
 }
 
-.breadcrumbs__item:active .breadcrumbs__icon,
-.breadcrumbs__item:not(:last-of-type):active .breadcrumbs__link {
-    fill: #FFFFFF4C;
+.breadcrumbs__item:not(:last-of-type):active {
     color: #FFFFFF4C;
 }
 
@@ -751,17 +734,13 @@ body {
     transition: border-color 0.1s ease;
 }
 
-.sort-button:focus {
+.sort-button:focus-visible {
     border-color: #68A2CA;
 }
 
-@supports selector(:focus-visible) {
+@supports not selector(:focus-visible) {
 
     .sort-button:focus {
-        border-color: #E5E5E5;
-    }
-
-    .sort-button:focus-visible {
         border-color: #68A2CA;
     }
 }
@@ -770,11 +749,6 @@ body {
     border-color: #000;
     transition: border-color 0.1s ease;
 }
-
-.sort-button__icon {
-    fill: #000;
-}
-
 
 /*--- Hotels List ---*/
 .hotels {
@@ -883,25 +857,25 @@ body {
     transition: background-color 0.1s ease;
 }
 
-.pagination__item:hover .pagination__link:not(.active) {
+.pagination__item:not(.active):hover .pagination__link {
     background-color: #68A2CA;
     border: 1px solid #82B3D3;
     transition: background-color 0.1s ease;
 }
 
-.pagination__item:focus-within .pagination__link:not(.active) {
+.pagination__item:not(.active):focus-within .pagination__link {
     background-color: #68A2CA;
     border: 1px solid #82B3D3;
 }
 
-.pagination__item:active .pagination__link:not(.active) {
+.pagination__item:not(.active):active .pagination__link {
     background-color: #82B3D3;
     border: none;
     color: #FFFFFF4C;
     transition: background-color 0.1s ease;
 }
 
-.pagination__link.active {
+.pagination__item.active .pagination__link {
     color: #000;
     background-color: #F2F2F2;
 }
