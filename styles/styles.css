@@ -283,11 +283,13 @@ body {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
 }
 
 .benefits__item {
     display: flex;
     flex: 1 0 400px;
+    background-color: #83B3D31E;
 }
 
 .benefits__img {
@@ -390,6 +392,7 @@ body {
 }
 
 .subscription__input {
+    font-family: inherit;
     min-width: 452px;
     padding: 0 20px;
     border-radius: 4px 0 0 4px;
@@ -405,9 +408,11 @@ body {
 }
 
 /*--- Footer ---*/
+.page__footer {
+    padding: 45px 0 40px;
+}
 .footer__container {
     display: flex;
-    padding: 40px 0 30px;
     justify-content: space-between;
 }
 
@@ -457,6 +462,12 @@ body {
 .footer__tel:active {
     color: #7561574C;
     transition: color 0.1s ease;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer__logo-svg {
