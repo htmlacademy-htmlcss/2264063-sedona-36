@@ -127,6 +127,17 @@ body {
     outline: 3px solid #83B3D3;
 }
 
+@supports selector(:focus-visible) {
+
+    .btn--transparent:focus {
+        outline: none;
+    }
+
+    .btn--transparent:focus-visible {
+        outline: 3px solid #83B3D3;
+    }
+}
+
 .btn--transparent:active {
     color: #FFFFFF4C;
 }
@@ -734,13 +745,25 @@ body {
     transition: border-color 0.1s ease;
     outline: none;
 }
+
 .sort-button:hover {
     border-color: #000;
     transition: border-color 0.1s ease;
 }
 
-.sort-button:focus-visible {
+.sort-button:focus {
     border-color: #68A2CA;
+}
+
+@supports selector(:focus-visible) {
+
+    .sort-button:focus {
+        border-color: #E5E5E5;
+    }
+
+    .sort-button:focus-visible {
+        border-color: #68A2CA;
+    }
 }
 
 .sort-button.active {
@@ -860,16 +883,17 @@ body {
     transition: background-color 0.1s ease;
 }
 
-.pagination__item:focus-within .pagination__link:not(.active) {
-    background-color: #68A2CA;
-    border: 1px solid #82B3D3;
-}
-
 .pagination__item:hover .pagination__link:not(.active) {
     background-color: #68A2CA;
     border: 1px solid #82B3D3;
     transition: background-color 0.1s ease;
 }
+
+.pagination__item:focus-within .pagination__link:not(.active) {
+    background-color: #68A2CA;
+    border: 1px solid #82B3D3;
+}
+
 .pagination__item:active .pagination__link:not(.active) {
     background-color: #82B3D3;
     border: none;
