@@ -436,6 +436,7 @@ body {
 
 .social__item:active .social__icon {
     fill: #68A2CA4C;
+    transition: fill 0.1s ease;
 }
 
 .footer__tel {
@@ -444,7 +445,33 @@ body {
     text-transform: uppercase;
     text-align: center;
     color: #000;
-    text-decoration: none
+    text-decoration: none;
+    transition: fill 0.1s ease;
+}
+
+.footer__tel:hover {
+    color: #756157;
+    transition: color 0.1s ease;
+}
+
+.footer__tel:active {
+    color: #7561574C;
+    transition: color 0.1s ease;
+}
+
+.footer__logo-svg {
+    fill: #000;
+    transition: fill 0.1s ease;
+}
+
+.footer__logo:hover .footer__logo-svg {
+    fill: #756157;
+    transition: fill 0.1s ease;
+}
+
+.footer__logo:active .footer__logo-svg {
+    fill: #7561574C;
+    transition: fill 0.1s ease;
 }
 
 /*=============== CATALOG ===============*/
