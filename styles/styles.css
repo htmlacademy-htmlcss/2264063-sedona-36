@@ -411,6 +411,33 @@ body {
     justify-content: space-between;
 }
 
+.social {
+    display: flex;
+}
+
+.social__item {
+    min-height: 40px;
+    padding: 0 10px;
+    min-width: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social__icon {
+    fill: #83B3D3;
+    transition: fill 0.1s ease;
+}
+
+.social__item:hover .social__icon {
+    fill: #68A2CA;
+    transition: fill 0.1s ease;
+}
+
+.social__item:active .social__icon {
+    fill: #68A2CA4C;
+}
+
 .footer__tel {
     font-size: 40px;
     line-height: 40px;
