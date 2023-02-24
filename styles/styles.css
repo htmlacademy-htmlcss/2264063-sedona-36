@@ -170,6 +170,18 @@ body {
     color: #FFFFFF19;
 }
 
+.btn:focus-visible {
+    outline: 3px solid #68A2CA;
+    border-radius: 4px;
+}
+
+@supports not selector(:focus-visible) {
+    .btn:focus {
+        outline: 3px solid #68A2CA;
+        border-radius: 4px;
+    }
+}
+
 .main {
     flex-grow: 1;
 }
@@ -182,6 +194,18 @@ body {
 .header__logo {
     margin: 0 30px -6px 0;
     z-index: 10;
+}
+
+.header__logo:focus-visible {
+    outline: 3px solid #68A2CA;
+    border-radius: 4px;
+}
+
+@supports not selector(:focus-visible) {
+    .header__logo:focus {
+        outline: 3px solid #68A2CA;
+        border-radius: 4px;
+    }
 }
 
 .header__nav {
@@ -232,6 +256,18 @@ body {
     opacity: 1;
 }
 
+.nav__link:focus-visible {
+    outline: 3px solid #68A2CA;
+    border-radius: 4px;
+}
+
+@supports not selector(:focus-visible) {
+    .nav__link:focus {
+        outline: 3px solid #68A2CA;
+        border-radius: 4px;
+    }
+}
+
 .nav__user-side {
     display: flex;
 }
@@ -244,6 +280,18 @@ body {
 .nav__icon:hover {
     opacity: 0.5;
     transition: opacity 0.2s ease;
+}
+
+.nav__icon:focus-visible {
+    outline: 3px solid #68A2CA;
+    border-radius: 4px;
+}
+
+@supports not selector(:focus-visible) {
+    .nav__icon:focus {
+        outline: 3px solid #68A2CA;
+        border-radius: 4px;
+    }
 }
 
 .nav__icon-search {
@@ -472,6 +520,19 @@ body {
     line-height: 24px;
     background-color: #F2F2F2;
     outline: none;
+    transition: background-color 0.1s ease;
+}
+
+.subscription__input:focus-visible {
+    background-color: #E6E6E6;
+    transition: background-color 0.1s ease;
+}
+
+@supports not selector(:focus-visible) {
+    .subscription__input:focus {
+        background-color: #E6E6E6;
+        transition: background-color 0.1s ease;
+    }
 }
 
 .subscription__input--shadow {
@@ -584,12 +645,17 @@ body {
 }
 
 .breadcrumbs__item:not(:last-of-type)::after {
-    content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' width='8' height='11'> <path fill='white' d='M7 5 2.1.7C1.9.5 1.4.5 1 .7c-.3.3-.2.8 0 1l4.2 3.8-4 3.7c-.3.3-.3.8 0 1 0 .1.3.3.5.3l.5-.3L6.9 6c.4-.3.4-.8 0-1Z'/> </svg>");
+    content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' width='8' height='11' viewBox='0 0 8 11'> <path fill='white' d='M7 5 2.1.7C1.9.5 1.4.5 1 .7c-.3.3-.2.8 0 1l4.2 3.8-4 3.7c-.3.3-.3.8 0 1 0 .1.3.3.5.3l.5-.3L6.9 6c.4-.3.4-.8 0-1Z'/> </svg>");
     margin: 0 6px;
 }
 
 .breadcrumbs__item:not(:last-of-type):hover {
     color: #FFFFFF99;
+}
+
+.breadcrumbs__link:focus {
+    outline: 3px solid #68A2CA;
+    border-radius: 4px;
 }
 
 .breadcrumbs__item:not(:last-of-type):active {
@@ -630,26 +696,17 @@ body {
     row-gap: 16px;
 }
 
-.filter__list--inputs {
+.filter__list--price {
     row-gap: 36px;
 }
 
-.filter__item--inputs {
+.filter__item--price {
     display: flex;
     column-gap: 2px;
 }
 
 .field {
     flex-basis: 50%;
-}
-
-.control {
-    line-height: 23px;
-}
-
-.control__input {
-    margin: 0;
-    color: black;
 }
 
 .field__input {
@@ -679,6 +736,141 @@ body {
     width: 191px;
 }
 
+/*--- Controls ---*/
+.control__input {
+    display: none;
+}
+
+.control {
+    line-height: 23px;
+    position: relative;
+    padding-left: 36px;
+    cursor: pointer;
+    outline: none;
+}
+
+.control:hover {
+    opacity: 0.6;
+}
+
+.control:focus-visible::before {
+    outline: 3px solid #83B3D3FF;
+}
+
+@supports not selector(:focus-visible) {
+    .control:focus::before {
+        outline: 3px solid #83B3D3FF;
+    }
+}
+
+.control:active {
+    opacity: 0.3;
+}
+
+.control::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+}
+
+/*--- Controls Radio ---*/
+.control__radio::before {
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 5px #fff;
+}
+
+.control__input[type = radio]:checked + .control__radio::before {
+    background-color: #3F5E72;
+}
+
+/*--- Controls Checkbox ---*/
+
+.control__checkbox::before {
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control__input[type = checkbox]:checked + .control__checkbox::before {
+    content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' width='13' height='11' fill='none' viewBox='0 0 13 11'>  <path fill='%233F5E72' d='M11 .5 4.5 7.9 1.1 4 0 5.2l4.5 5.2 7.7-8.6L11 .5Z'/>  </svg>");
+}
+
+/*--- Price Inputs ---*/
+.field__input {
+    background-color: #F2F2F2;
+    border: 2px solid transparent;
+}
+
+.field__input::placeholder {
+    text-align: right;
+    font-weight: 400;
+}
+
+.field__input:hover {
+    background-color: #E6E6E6;
+}
+
+.field__input:focus-visible {
+    outline: 3px solid #83B3D3;
+    background-color: #E6E6E6;
+}
+
+.field__input:not(:placeholder-shown):focus-visible {
+    border: 2px solid #000;
+    outline: none;
+    background-color: #F2F2F2;
+}
+
+/*--- Range Inputs ---*/
+.range {
+    display: flex;
+}
+
+.range__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    flex-basis: 100%;
+    margin: 0;
+}
+
+.range__input::-webkit-slider-runnable-track {
+    height: 4px;
+    background-color: gray;
+}
+
+.range__input::-webkit-slider-thumb {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    margin-top: -7px;
+}
+
+.range__input::-moz-range-track {
+    height: 4px;
+    background: gray;
+}
+
+.range__input::-moz-range-thumb {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    margin-top: -7px;
+}
+
 /*--- Section Hotels ---*/
 .hotels__header {
     display: flex;
@@ -689,7 +881,6 @@ body {
 .hotel__filter-buttons {
     margin-left: auto;
     display: flex;
-    align-items: center;
 }
 
 .hotels__found-info {
@@ -704,9 +895,61 @@ body {
 /*--- Select ---*/
 .select-control {
     font-family: inherit;
-    font-size: 18px;
-    line-height: 21px;
+    font-size: inherit;
+    color: #333333;
+    line-height: inherit;
+    appearance: none;
+    min-width: 292px;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
+    padding: 0 20px;
+    height: 100%;
+    cursor: pointer;
+    transition: border-color 0.1s ease;
+    outline: none;
+}
+
+.select-wrapper {
+    position: relative;
     margin-right: 70px;
+}
+
+.select-wrapper::after {
+    content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' width='12' height='9' fill='black' viewBox='0 0 12 9'><path d='m6.7 7.7 5-5.3a1 1 0 0 0 0-1.2 1 1 0 0 0-1.1 0L6 6 1.6 1.2a1 1 0 0 0-1.2 0c-.2.1-.3.4-.3.6 0 .2 0 .4.3.6l5 5.3c.4.4 1 .4 1.3 0Z'/></svg>");
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+
+.select-control:hover {
+    border-color: #68A2CA;
+    transition: border-color 0.1s ease;
+}
+
+.select-control:focus {
+    border-color: #68A2CA;
+    transition: border-color 0.1s ease;
+}
+
+.select-control:focus-visible {
+    border-color: #3F5E72;
+    transition: border-color 0.1s ease;
+}
+
+@supports not selector(:focus-visible) {
+    .select-control:focus {
+        border-color: #3F5E72;
+        transition: border-color 0.1s ease;
+    }
+}
+
+.select-control:disabled {
+    border-color: #0000004C;
+    color: #0000004C;
+    transition: border-color 0.1s ease;
+    cursor: auto;
 }
 
 /*--- Sort Button ---*/
