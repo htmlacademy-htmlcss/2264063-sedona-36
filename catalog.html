@@ -528,7 +528,7 @@
     </a>
   </div>
 </footer>
-<div class='modal__overlay active'>
+<div class='modal__overlay'>
   <div class='modal'>
     <button class='modal__close' type='button'>
       <span class='visually-hidden'>Закрыть окно</span>
@@ -551,8 +551,6 @@
             action="https://echo.htmlacademy.ru/"
             method="post"
       >
-        
-        
         <label class='modal__control control--date-in' for='date-in'>Дата заезда:</label>
         <div class='modal__input-wrapper'>
           <input class='modal__input'
@@ -562,10 +560,10 @@
                  id='date-in'
                  placeholder='Укажите дату'
           >
-          <span class='modal__input-message message-error' style='display: block'>Мы не можем отправить вас в прошлое.</span>
+          <span class='modal__input-message message-error'
+                style='display: block'
+          >Мы не можем отправить вас в прошлое.</span>
         </div>
-        
-        
         <label class='modal__control control--date-out' for='date-out'>Дата выезда:</label>
         <div class='modal__input-wrapper'>
           <input class='modal__input'
@@ -577,8 +575,6 @@
           >
           <span class='modal__input-message message-ok' style='display: block'>На эти даты есть свободные номера. Пока есть.</span>
         </div>
-        
-        
         <label class='modal__control control--adult' for='adult-count'>Взрослые:</label>
         <div class='modal__input-wrapper'>
           <button class='input__iterator iterator__minus' type='button'>
@@ -662,5 +658,6 @@
     </section>
   </div>
 </div>
+<script src='app.js'></script>
 </body>
 </html>
