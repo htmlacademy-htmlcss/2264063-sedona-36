@@ -1255,6 +1255,7 @@ a .header__logo:active {
     border: none;
     padding: 12px 40px;
     transition: background-color 0.2s ease;
+    width: 100%;
 }
 
 .modal__input[type=text] {
@@ -1274,7 +1275,6 @@ a .header__logo:active {
 
 .modal__input[type=number] {
     text-align: center;
-    width: 100%;
 }
 
 .modal__input-wrapper {
@@ -1351,7 +1351,7 @@ a .header__logo:active {
     grid-column: 1;
 }
 
-.control--date-in + .modal__input {
+.control--date-in + .modal__input-wrapper {
     grid-row: 1;
     grid-column: 2 / -1;
 }
@@ -1361,7 +1361,7 @@ a .header__logo:active {
     grid-column: 1;
 }
 
-.control--date-out + .modal__input {
+.control--date-out + .modal__input-wrapper {
     grid-row: 2;
     grid-column: 2 / -1;
 }
@@ -1435,7 +1435,6 @@ a .header__logo:active {
     display: block;
 }
 
-
 .tooltip__content:after {
     content: '';
     position: absolute;
@@ -1446,8 +1445,27 @@ a .header__logo:active {
     border-bottom: 10px solid #333;
 }
 
+/*--- Modal Message ---*/
 
+.modal__input-message {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -25px;
+    padding: 0 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
 
+.message-error {
+    color: #FF5757;
+}
+
+.message-ok {
+color: #333;
+}
 
 
 

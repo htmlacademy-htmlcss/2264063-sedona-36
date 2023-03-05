@@ -531,7 +531,7 @@
 <div class='modal__overlay active'>
   <div class='modal'>
     <button class='modal__close' type='button'>
-      <span class='visually-hidden'>Закрыть</span>
+      <span class='visually-hidden'>Закрыть окно</span>
       <svg aria-label="true"
            focusable="false"
            xmlns="http://www.w3.org/2000/svg"
@@ -551,10 +551,34 @@
             action="https://echo.htmlacademy.ru/"
             method="post"
       >
+        
+        
         <label class='modal__control control--date-in' for='date-in'>Дата заезда:</label>
-        <input class='modal__input' type='text' name='date-in' value='27 апреля 2020' id='date-in' placeholder='Укажите дату'>
+        <div class='modal__input-wrapper'>
+          <input class='modal__input'
+                 type='text'
+                 name='date-in'
+                 value='27 апреля 2020'
+                 id='date-in'
+                 placeholder='Укажите дату'
+          >
+          <span class='modal__input-message message-error' style='display: block'>Мы не можем отправить вас в прошлое.</span>
+        </div>
+        
+        
         <label class='modal__control control--date-out' for='date-out'>Дата выезда:</label>
-        <input class='modal__input' type='text' name='date-out' value='1 сентября 2021' id='date-out' placeholder='Укажите дату'>
+        <div class='modal__input-wrapper'>
+          <input class='modal__input'
+                 type='text'
+                 name='date-out'
+                 value='1 сентября 2021'
+                 id='date-out'
+                 placeholder='Укажите дату'
+          >
+          <span class='modal__input-message message-ok' style='display: block'>На эти даты есть свободные номера. Пока есть.</span>
+        </div>
+        
+        
         <label class='modal__control control--adult' for='adult-count'>Взрослые:</label>
         <div class='modal__input-wrapper'>
           <button class='input__iterator iterator__minus' type='button'>
