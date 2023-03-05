@@ -1237,7 +1237,7 @@ a .header__logo:active {
 
 .modal__form {
     display: grid;
-    grid-template-columns: minmax(137px, auto) 110px 86px minmax(130px, auto) 110px;
+    grid-template-columns: minmax(137px, auto) 110px 88px minmax(130px, auto) 110px;
     row-gap: 48px;
     align-items: center;
 }
@@ -1397,7 +1397,7 @@ a .header__logo:active {
 /*--- Tooltip ---*/
 
 .tooltip {
-    margin-left: 10px;
+    margin-left: 8px;
     position: relative;
 }
 
