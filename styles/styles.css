@@ -187,7 +187,7 @@ body.locked {
 }
 
 .header__logo {
-    margin: 0 30px -6px 0;
+    margin: 0 29px -6px 0;
     position: relative;
     z-index: 10;
     display: block;
@@ -404,7 +404,7 @@ a .header__logo:active {
 /*--- Section Benefits ---*/
 .benefits .section__header {
     padding: 69px 0 90px;
-    width: 680px;
+    max-width: 680px;
 }
 
 .benefits .section__title {
@@ -459,7 +459,7 @@ a .header__logo:active {
 /*--- Section Services ---*/
 .services .section__header {
     padding: 64px 0;
-    width: 510px;
+    max-width: 510px;
 }
 
 .services__list {
@@ -492,7 +492,7 @@ a .header__logo:active {
 
 .hotel-search .section__header {
     margin-bottom: 54px;
-    width: 600px;
+    max-width: 600px;
 }
 
 .hotel-search .btn {
@@ -513,7 +513,7 @@ a .header__logo:active {
 .subscription .section__header {
     padding: 96px 0 54px;
     color: #000;
-    width: 475px;
+    max-width: 475px;
 }
 
 .subscription--index .section__header {
@@ -532,7 +532,7 @@ a .header__logo:active {
     border-radius: 4px 0 0 4px;
     border: none;
     font-size: inherit;
-    line-height: 24px;
+    line-height: 25px;
     background-color: #F2F2F2;
     outline: none;
     transition: background-color 0.1s ease;
@@ -828,7 +828,7 @@ a .header__logo:active {
     line-height: 24px;
     color: #000;
     width: 100%;
-    padding: 10px 40px 10px 20px;
+    padding: 11px 40px 9px 19px;
     border: 2px solid transparent;
 }
 
@@ -958,7 +958,7 @@ a .header__logo:active {
     padding: 0 40px 0 20px;
     cursor: pointer;
     transition: border-color 0.1s ease;
-    background: url("../images/components/select-arrow.svg") right 20px center no-repeat;
+    background: url("../images/components/select-arrow.svg") right 18px center no-repeat;
 }
 
 .select-control:hover {
@@ -1026,10 +1026,10 @@ a .header__logo:active {
     display: grid;
     grid-template-columns: repeat(3, 340px);
     gap: 20px;
-    row-gap: 18px;
+    row-gap: 17px;
     list-style: none;
     padding: 0 0 38px 0;
-    margin: 0 0 38px 0;
+    margin: 0 0 39px 0;
     border-bottom: 1px solid #E6E6E6;
 }
 
@@ -1086,6 +1086,8 @@ a .header__logo:active {
 
 .rating__stars {
     grid-area: stars;
+    display: flex;
+    column-gap: 6px;
 }
 
 .rating__value {
@@ -1156,6 +1158,7 @@ a .header__logo:active {
     align-items: center;
     height: 60px;
     width: 60px;
+    letter-spacing: 1px;
 }
 
 /*--- Modal ---*/
@@ -1186,8 +1189,8 @@ a .header__logo:active {
 
 .modal__close {
     position: absolute;
-    top: 64px;
-    right: 52px;
+    top: 66px;
+    right: 51px;
     background: #F2F2F2;
     border: none;
     border-radius: 50%;
@@ -1237,7 +1240,7 @@ a .header__logo:active {
 
 .modal__form {
     display: grid;
-    grid-template-columns: minmax(137px, auto) 110px 88px minmax(130px, auto) 110px;
+    grid-template-columns: minmax(137px, auto) 110px 90px minmax(130px, auto) 110px;
     row-gap: 48px;
     align-items: center;
 }
@@ -1253,14 +1256,14 @@ a .header__logo:active {
     background: #F2F2F2;
     border-radius: 4px;
     border: none;
-    padding: 12px 40px;
+    padding: 13px 40px 11px;
     transition: background-color 0.2s ease;
     width: 100%;
 }
 
 .modal__input[type=text] {
     background: url("../images/components/modal/calendar.svg") no-repeat right 22px center, #F2F2F2;
-    padding: 12px 40px 12px 20px;
+    padding: 13px 40px 11px 20px;
 }
 
 .modal__input[type=text]::placeholder {
@@ -1346,6 +1349,18 @@ a .header__logo:active {
     outline: 2px solid #000000;
 }
 
+.modal__input:disabled {
+    background-color: #e6e6e640;
+    color: #0000004D;
+}
+
+.modal__input:disabled ~ .input__iterator {
+    background-color: #e6e6e640;
+    color: #0000004D;
+    opacity: 0.2;
+    cursor: auto;
+}
+
 .control--date-in {
     grid-row: 1;
     grid-column: 1;
@@ -1397,7 +1412,7 @@ a .header__logo:active {
 /*--- Tooltip ---*/
 
 .tooltip {
-    margin-left: 8px;
+    margin-left: 5px;
     position: relative;
 }
 
@@ -1410,15 +1425,15 @@ a .header__logo:active {
     height: 26px;
 }
 
-
 .tooltip__content {
     position: absolute;
     display: none;
     z-index: 20;
-    top: calc(100% + 20px);
+    top: calc(100% + 17px);
     left: 50%;
     transform: translateX(-50%);
-    padding: 15px 18px 18px 22px;
+    padding: 20px 18px 23px 22px;
+    margin-left: -1px;
     background-color: #333;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     border-radius: 10px;

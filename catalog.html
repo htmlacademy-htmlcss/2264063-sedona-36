@@ -197,14 +197,12 @@
               </div>
             </div>
             <div class="range-slider__scale">
-              <div class='range-slider__bar' style='left: 0; width: 80%'>
+              <div class='range-slider__bar' style='left: 0; width: 79%'>
                 <button type='button' class='range-slider__toggle range-slider__toggle--min'></button>
                 <button type='button' class='range-slider__toggle range-slider__toggle--max'></button>
               </div>
             </div>
           </fieldset>
-          
-          
           <div class="filter__buttons">
             <button class="btn btn--blue"
                     type="submit"
@@ -444,7 +442,7 @@
              id="subscription__input"
              name="user-email"
              type="email"
-             placeholder="Ваш e-mail*"
+             placeholder="Ваш e-mail"
              required
       >
       <button class="btn btn--blue btn--size-l btn--subscribe"
@@ -577,6 +575,7 @@
         </div>
         <label class='modal__control control--adult' for='adult-count'>Взрослые:</label>
         <div class='modal__input-wrapper'>
+          <input class='modal__input' type='number' name='adult-count' value='2' id='adult-count' placeholder=' '>
           <button class='input__iterator iterator__minus' type='button'>
             <span class='visually-hidden'>Уменьшить</span>
             <svg aria-label="true"
@@ -590,7 +589,6 @@
               <path fill="currentColor" d="M3 9v2h14V9H3Z"/>
             </svg>
           </button>
-          <input class='modal__input' type='number' name='adult-count' value='2' id='adult-count' placeholder=' '>
           <button class='input__iterator iterator__plus' type='button'>
             <span class='visually-hidden'>Увеличить</span>
             <svg aria-label="true"
@@ -625,6 +623,7 @@
         </span>
         </label>
         <div class='modal__input-wrapper'>
+          <input class='modal__input' type='number' name='child-count' value='2' id='child-count' placeholder=' '>
           <button class='input__iterator iterator__minus' type='button'>
             <span class='visually-hidden'>Уменьшить</span>
             <svg aria-label="true"
@@ -638,7 +637,6 @@
               <path fill="currentColor" d="M3 9v2h14V9H3Z"/>
             </svg>
           </button>
-          <input class='modal__input' type='number' name='child-count' value='2' id='child-count' placeholder=' '>
           <button class='input__iterator iterator__plus' type='button'>
             <span class='visually-hidden'>Увеличить</span>
             <svg aria-label="true"
