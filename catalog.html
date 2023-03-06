@@ -95,6 +95,7 @@
       <section class="filter">
         <h2 class="visually-hidden">Фильтр выбора гостиниц</h2>
         <form class="filter__form"
+              id="filter-form"
               action="https://echo.htmlacademy.ru/"
               method="post"
         >
@@ -108,8 +109,8 @@
                          name="swimming-pool"
                          checked
                   >
-                  <span class='control__mark control__mark--checkbox'></span>
-                  <span class='control__label'>Бассейн</span>
+                  <span class="control__mark control__mark--checkbox"></span>
+                  <span class="control__label">Бассейн</span>
                 </label>
               </li>
               <li class="filter__item">
@@ -119,8 +120,8 @@
                          name="parking"
                          checked
                   >
-                  <span class='control__mark control__mark--checkbox'></span>
-                  <span class='control__label'>Парковка</span>
+                  <span class="control__mark control__mark--checkbox"></span>
+                  <span class="control__label">Парковка</span>
                 </label>
               </li>
               <li class="filter__item">
@@ -129,8 +130,8 @@
                          type="checkbox"
                          name="wi-fi"
                   >
-                  <span class='control__mark control__mark--checkbox'></span>
-                  <span class='control__label'>Wi-Fi</span>
+                  <span class="control__mark control__mark--checkbox"></span>
+                  <span class="control__label">Wi-Fi</span>
                 </label>
               </li>
             </ul>
@@ -146,8 +147,8 @@
                          value="hotel"
                          checked
                   >
-                  <span class='control__mark control__mark--radio'></span>
-                  <span class='control__label'>Гостиница</span>
+                  <span class="control__mark control__mark--radio"></span>
+                  <span class="control__label">Гостиница</span>
                 </label>
               </li>
               <li class="filter__item">
@@ -157,8 +158,8 @@
                          name="house-type"
                          value="motel"
                   >
-                  <span class='control__mark control__mark--radio'></span>
-                  <span class='control__label'>Мотель</span>
+                  <span class="control__mark control__mark--radio"></span>
+                  <span class="control__label">Мотель</span>
                 </label>
               </li>
               <li class="filter__item">
@@ -168,8 +169,8 @@
                          name="house-type"
                          value="apartments"
                   >
-                  <span class='control__mark control__mark--radio'></span>
-                  <span class='control__label'>Апартаменты</span>
+                  <span class="control__mark control__mark--radio"></span>
+                  <span class="control__label">Апартаменты</span>
                 </label>
               </li>
             </ul>
@@ -177,29 +178,29 @@
           <fieldset class="filter__group filter__group--range">
             <legend class="filter__title">Стоимость, ₽:</legend>
             <div class="filter__range-inputs">
-              <div class='field__wrapper'>
+              <div class="field__wrapper">
                 <input class="field__input field__input--start"
                        type="number"
-                       id='input-number-start'
+                       id="input-number-start"
                        name="start-price"
                        value="0"
                 >
-                <label class="field" for='input-number-start'>от</label>
+                <label class="field" for="input-number-start">от</label>
               </div>
-              <div class='field__wrapper'>
+              <div class="field__wrapper">
                 <input class="field__input field__input--end"
                        type="number"
-                       id='input-number-end'
+                       id="input-number-end"
                        name="end-price"
                        value="9000"
                 >
-                <label class="field" for='input-number-end'>до</label>
+                <label class="field" for="input-number-end">до</label>
               </div>
             </div>
             <div class="range-slider__scale">
-              <div class='range-slider__bar' style='left: 0; width: 79%'>
-                <button type='button' class='range-slider__toggle range-slider__toggle--min'></button>
-                <button type='button' class='range-slider__toggle range-slider__toggle--max'></button>
+              <div class="range-slider__bar" style="left: 0; width: 79%">
+                <button type="button" class="range-slider__toggle range-slider__toggle--min"></button>
+                <button type="button" class="range-slider__toggle range-slider__toggle--max"></button>
               </div>
             </div>
           </fieldset>
@@ -228,6 +229,8 @@
           <div class="select-wrapper">
             <select class="select-control"
                     aria-label="Сортировка"
+                    form="filter-form"
+                    name="sort-option"
             >
               <option value="cheap">Сначала дешевые</option>
               <option value="popular">Сначала популярные</option>
@@ -313,11 +316,11 @@
                   type="button"
           >В избранное
           </button>
-          <span class='rating__stars' aria-label='Отель 4 звезды.'>
-            <img src='./images/catalog/hotels/star.svg' alt=''>
-            <img src='./images/catalog/hotels/star.svg' alt=''>
-            <img src='./images/catalog/hotels/star.svg' alt=''>
-            <img src='./images/catalog/hotels/star.svg' alt=''>
+          <span class="rating__stars" aria-label="Отель 4 звезды.">
+            <img src="./images/catalog/hotels/star.svg" alt="">
+            <img src="./images/catalog/hotels/star.svg" alt="">
+            <img src="./images/catalog/hotels/star.svg" alt="">
+            <img src="./images/catalog/hotels/star.svg" alt="">
             </span>
           <span class="rating__value">Рейтинг: 8,5</span>
         </li>
@@ -338,11 +341,11 @@
                   type="button"
           >В избранном
           </button>
-          <span class='rating__stars' aria-label='Отель 4 звезды.'>
-            <img src='./images/catalog/hotels/star.svg' alt=''>
-            <img src='./images/catalog/hotels/star.svg' alt=''>
-            <img src='./images/catalog/hotels/star.svg' alt=''>
-            <img src='./images/catalog/hotels/star.svg' alt=''>
+          <span class="rating__stars" aria-label="Отель 4 звезды.">
+            <img src="./images/catalog/hotels/star.svg" alt="">
+            <img src="./images/catalog/hotels/star.svg" alt="">
+            <img src="./images/catalog/hotels/star.svg" alt="">
+            <img src="./images/catalog/hotels/star.svg" alt="">
             </span>
           <span class="rating__value">Рейтинг: 9,2</span>
         </li>
@@ -363,10 +366,10 @@
                   type="button"
           >В избранное
           </button>
-          <span class='rating__stars' aria-label='Отель 3 звезды.'>
-            <img src='./images/catalog/hotels/star.svg' alt=''>
-            <img src='./images/catalog/hotels/star.svg' alt=''>
-            <img src='./images/catalog/hotels/star.svg' alt=''>
+          <span class="rating__stars" aria-label="Отель 3 звезды.">
+            <img src="./images/catalog/hotels/star.svg" alt="">
+            <img src="./images/catalog/hotels/star.svg" alt="">
+            <img src="./images/catalog/hotels/star.svg" alt="">
             </span>
           <span class="rating__value">Рейтинг: 6,9</span>
         </li>
@@ -387,9 +390,9 @@
                   type="button"
           >В избранное
           </button>
-          <span class='rating__stars' aria-label='Отель 2 звезды.'>
-            <img src='./images/catalog/hotels/star.svg' alt=''>
-            <img src='./images/catalog/hotels/star.svg' alt=''>
+          <span class="rating__stars" aria-label="Отель 2 звезды.">
+            <img src="./images/catalog/hotels/star.svg" alt="">
+            <img src="./images/catalog/hotels/star.svg" alt="">
             </span>
           <span class="rating__value">Рейтинг: 5,0</span>
         </li>
@@ -511,7 +514,7 @@
     <a class="footer__tel"
        href="tel: 88188121212"
     >+7 (812) 812-12-12</a>
-    <a class="footer__logo" href="https://htmlacademy.ru/study" target='_blank'>
+    <a class="footer__logo" href="https://htmlacademy.ru/study" target="_blank">
       <svg aria-label="true"
            focusable="false"
            xmlns="http://www.w3.org/2000/svg"
@@ -526,10 +529,10 @@
     </a>
   </div>
 </footer>
-<div class='modal__overlay'>
-  <div class='modal'>
-    <button class='modal__close' type='button'>
-      <span class='visually-hidden'>Закрыть окно</span>
+<div class="modal__overlay">
+  <div class="modal">
+    <button class="modal__close" type="button">
+      <span class="visually-hidden">Закрыть окно</span>
       <svg aria-label="true"
            focusable="false"
            xmlns="http://www.w3.org/2000/svg"
@@ -543,41 +546,41 @@
         />
       </svg>
     </button>
-    <section class='modal__content'>
-      <h2 class='modal__title'>Поиск гостиницы в Седоне</h2>
-      <form class='modal__form'
+    <section class="modal__content">
+      <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
+      <form class="modal__form"
             action="https://echo.htmlacademy.ru/"
             method="post"
       >
-        <label class='modal__control control--date-in' for='date-in'>Дата заезда:</label>
-        <div class='modal__input-wrapper'>
-          <input class='modal__input'
-                 type='text'
-                 name='date-in'
-                 value='27 апреля 2020'
-                 id='date-in'
-                 placeholder='Укажите дату'
+        <label class="modal__control control--date-in" for="date-in">Дата заезда:</label>
+        <div class="modal__input-wrapper">
+          <input class="modal__input"
+                 type="text"
+                 name="date-in"
+                 value="27 апреля 2020"
+                 id="date-in"
+                 placeholder="Укажите дату"
           >
-          <span class='modal__input-message message-error'
-                style='display: block'
+          <span class="modal__input-message message-error"
+                style="display: block"
           >Мы не можем отправить вас в прошлое.</span>
         </div>
-        <label class='modal__control control--date-out' for='date-out'>Дата выезда:</label>
-        <div class='modal__input-wrapper'>
-          <input class='modal__input'
-                 type='text'
-                 name='date-out'
-                 value='1 сентября 2023'
-                 id='date-out'
-                 placeholder='Укажите дату'
+        <label class="modal__control control--date-out" for="date-out">Дата выезда:</label>
+        <div class="modal__input-wrapper">
+          <input class="modal__input"
+                 type="text"
+                 name="date-out"
+                 value="1 сентября 2023"
+                 id="date-out"
+                 placeholder="Укажите дату"
           >
-          <span class='modal__input-message message-ok' style='display: block'>На эти даты есть свободные номера. Пока есть.</span>
+          <span class="modal__input-message message-ok" style="display: block">На эти даты есть свободные номера. Пока есть.</span>
         </div>
-        <label class='modal__control control--adult' for='adult-count'>Взрослые:</label>
-        <div class='modal__input-wrapper'>
-          <input class='modal__input' type='number' name='adult-count' value='2' id='adult-count' placeholder=' '>
-          <button class='input__iterator iterator__minus' type='button'>
-            <span class='visually-hidden'>Уменьшить</span>
+        <label class="modal__control control--adult" for="adult-count">Взрослые:</label>
+        <div class="modal__input-wrapper">
+          <input class="modal__input" type="number" name="adult-count" value="2" id="adult-count" placeholder=" ">
+          <button class="input__iterator iterator__minus" type="button">
+            <span class="visually-hidden">Уменьшить</span>
             <svg aria-label="true"
                  focusable="false"
                  xmlns="http://www.w3.org/2000/svg"
@@ -589,8 +592,8 @@
               <path fill="currentColor" d="M3 9v2h14V9H3Z"/>
             </svg>
           </button>
-          <button class='input__iterator iterator__plus' type='button'>
-            <span class='visually-hidden'>Увеличить</span>
+          <button class="input__iterator iterator__plus" type="button">
+            <span class="visually-hidden">Увеличить</span>
             <svg aria-label="true"
                  focusable="false"
                  xmlns="http://www.w3.org/2000/svg"
@@ -603,9 +606,9 @@
             </svg>
           </button>
         </div>
-        <label class='modal__control control--child' for='child-count'>Дети:
-          <span class='tooltip'>
-          <button class='tooltip__button' type='button' aria-labelledby='tooltip-child'>
+        <label class="modal__control control--child" for="child-count">Дети:
+          <span class="tooltip">
+          <button class="tooltip__button" type="button" aria-labelledby="tooltip-child">
             <svg aria-label="true"
                  focusable="false"
                  width="2"
@@ -617,15 +620,15 @@
               <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
             </svg>
           </button>
-          <span class='tooltip__content' role='tooltip' id='tooltip-child'>
+          <span class="tooltip__content" role="tooltip" id="tooltip-child">
             Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
           </span>
         </span>
         </label>
-        <div class='modal__input-wrapper'>
-          <input class='modal__input' type='number' name='child-count' value='2' id='child-count' placeholder=' '>
-          <button class='input__iterator iterator__minus' type='button'>
-            <span class='visually-hidden'>Уменьшить</span>
+        <div class="modal__input-wrapper">
+          <input class="modal__input" type="number" name="child-count" value="2" id="child-count" placeholder=" ">
+          <button class="input__iterator iterator__minus" type="button">
+            <span class="visually-hidden">Уменьшить</span>
             <svg aria-label="true"
                  focusable="false"
                  xmlns="http://www.w3.org/2000/svg"
@@ -637,8 +640,8 @@
               <path fill="currentColor" d="M3 9v2h14V9H3Z"/>
             </svg>
           </button>
-          <button class='input__iterator iterator__plus' type='button'>
-            <span class='visually-hidden'>Увеличить</span>
+          <button class="input__iterator iterator__plus" type="button">
+            <span class="visually-hidden">Увеличить</span>
             <svg aria-label="true"
                  focusable="false"
                  xmlns="http://www.w3.org/2000/svg"
@@ -651,11 +654,11 @@
             </svg>
           </button>
         </div>
-        <button class='btn modal__btn btn--blue btn--size-l' type='submit'>Найти</button>
+        <button class="btn modal__btn btn--blue btn--size-l" type="submit">Найти</button>
       </form>
     </section>
   </div>
 </div>
-<script src='app.js'></script>
+<script src="app.js"></script>
 </body>
 </html>

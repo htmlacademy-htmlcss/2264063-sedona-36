@@ -759,14 +759,15 @@ a .header__logo:active {
     opacity: 0.6;
 }
 
+.control:active .control__mark,
+.control:active .control__label {
+    opacity: 0.3;
+}
+
 .control__input:disabled + .control__mark,
 .control__input:disabled ~ .control__label {
     opacity: 0.3;
     cursor: auto;
-}
-
-.control:active {
-    opacity: 0.3;
 }
 
 .control__input:focus-visible + .control__mark {
@@ -858,6 +859,11 @@ a .header__logo:active {
 .field__input:not(:placeholder-shown):focus-visible {
     border: 2px solid #000;
     outline: none;
+    background-color: #F2F2F2;
+}
+
+.field__input:disabled {
+    opacity: 0.3;
     background-color: #F2F2F2;
 }
 
