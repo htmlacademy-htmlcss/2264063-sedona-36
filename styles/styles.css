@@ -1387,22 +1387,22 @@ a .header__logo:active {
   width: 100%;
 }
 
-.modal__input[type="text"] {
+.modal__input--date {
   background: url("../images/components/modal/calendar.svg") no-repeat right 22px center, #f2f2f2;
   padding: 13px 40px 11px 20px;
 }
 
-.modal__input[type="text"]::-webkit-input-placeholder {
+.modal__input--date::-webkit-input-placeholder {
   color: #000000;
   opacity: 0.6;
 }
 
-.modal__input[type="text"]::-moz-placeholder {
+.modal__input--date::-moz-placeholder {
   color: #000000;
   opacity: 0.6;
 }
 
-.modal__input[type="text"]::placeholder {
+.modal__input--date::placeholder {
   color: #000000;
   opacity: 0.6;
 }
