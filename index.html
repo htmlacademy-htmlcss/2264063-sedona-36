@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="stylesheet"
         href="styles/styles.css"
-  >
+>
 </head>
 <body>
-<!-- Page header -->
 <header class="page__header">
   <div class="container header__container">
     <img
@@ -61,10 +62,8 @@
     </nav>
   </div>
 </header>
-<!-- Page main -->
 <main class="main main__index">
   <h1 class="visually-hidden">Город-курорт Седона</h1>
-  <!-- Section intro -->
   <section class="intro">
     <img class="intro__title"
          src="images/index/intro/welcome.svg"
@@ -73,7 +72,6 @@
          height="352"
     >
   </section>
-  <!-- Section benefits -->
   <section class="benefits">
     <header class="section__header">
       <h2 class="section__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -124,7 +122,6 @@
       </li>
     </ul>
   </section>
-  <!-- Section services -->
   <section class="services">
     <header class="section__header">
       <h2 class="section__title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
@@ -165,7 +162,6 @@
       </li>
     </ul>
   </section>
-  <!-- Section hotel search -->
   <section class="hotel-search">
     <header class="section__header">
       <h2 class="section__title">Заинтересовались?</h2>
@@ -176,7 +172,6 @@
        class="btn btn--brown btn--size-l"
     >Поиск гостиницы В седоне</a>
   </section>
-  <!-- Section subscription -->
   <section class="subscription subscription--index">
     <header class="section__header">
       <h2 class="section__title">Подпишитесь на рассылку</h2>
@@ -203,11 +198,11 @@
     </form>
   </section>
 </main>
-<!-- Page footer -->
 <footer class="page__footer">
   <div class="container footer__container">
     <section class="social">
-      <a href="#"
+      <h2 class="visually-hidden">Социальные сети</h2>
+      <a href="https://vk.com/htmlacademy"
          class="social__item"
          target="_blank"
       >
@@ -226,7 +221,7 @@
           />
         </svg>
       </a>
-      <a href="#"
+      <a href="https://t.me/htmlacademy"
          class="social__item"
          target="_blank"
       >
@@ -242,7 +237,7 @@
           <path d="M16.8 1 .8 7c-1 .4-1 1-.2 1.3l4.1 1.3 9.5-6c.5-.3.9-.1.5.2l-7.6 7-.3 4.1c.4 0 .6-.2.8-.4l2-2 4.1 3.1c.8.5 1.3.3 1.5-.7L18 2.2c.3-1-.4-1.6-1.1-1.2Z"/>
         </svg>
       </a>
-      <a href="#"
+      <a href="https://www.youtube.com/user/htmlacademyru"
          class="social__item"
          target="_blank"
       >
@@ -260,9 +255,11 @@
       </a>
     </section>
     <a class="footer__tel"
-       href="tel: 88188121212"
-    >+7 (812) 812-12-12</a>
-    <a class="footer__logo" href="https://htmlacademy.ru/study" target="_blank">
+       href="tel:88188121212"
+    ><span class="visually-hidden">Номер телефона для бронирования гостиницы в Седоне.</span>
+      +7 (812) 812-12-12</a>
+    <a class="footer__logo" href="https://htmlacademy.ru/" target="_blank">
+      <span class="visually-hidden">Перейти на сайт Академии</span>
       <svg aria-label="true"
            focusable="false"
            xmlns="http://www.w3.org/2000/svg"
@@ -302,7 +299,7 @@
       >
         <label class="modal__control control--date-in" for="date-in">Дата заезда:</label>
         <div class="modal__input-wrapper">
-          <input class="modal__input"
+          <input class="modal__input modal__input--date"
                  type="text"
                  name="date-in"
                  value="27 апреля 2020"
@@ -315,7 +312,7 @@
         </div>
         <label class="modal__control control--date-out" for="date-out">Дата выезда:</label>
         <div class="modal__input-wrapper">
-          <input class="modal__input"
+          <input class="modal__input modal__input--date"
                  type="text"
                  name="date-out"
                  value="1 сентября 2023"
