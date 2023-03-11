@@ -183,6 +183,7 @@
                        id="input-number-start"
                        name="start-price"
                        value="0"
+                       required
                 >
                 <label class="field" for="input-number-start">от</label>
               </div>
@@ -192,14 +193,20 @@
                        id="input-number-end"
                        name="end-price"
                        value="9000"
+                       required
                 >
                 <label class="field" for="input-number-end">до</label>
               </div>
             </div>
             <div class="range-slider__scale">
               <div class="range-slider__bar" style="left: 0; width: 79%">
-                <button type="button" class="range-slider__toggle range-slider__toggle--min"></button>
-                <button type="button" class="range-slider__toggle range-slider__toggle--max"></button>
+                <span class="visually-hidden">Ползунок выбора диапазона стоимости отелей.</span>
+                <button type="button" class="range-slider__toggle range-slider__toggle--min">
+                  <span class="visually-hidden">Рычажок выбора минимальной стоимости.</span>
+                </button>
+                <button type="button" class="range-slider__toggle range-slider__toggle--max">
+                  <span class="visually-hidden">Рычажок выбора максимальной стоимости.</span>
+                </button>
               </div>
             </div>
           </fieldset>
@@ -555,6 +562,7 @@
                  value="27 апреля 2020"
                  id="date-in"
                  placeholder="Укажите дату"
+                 required
           >
           <span class="modal__input-message message-error"
                 style="display: block"
@@ -568,12 +576,20 @@
                  value="1 сентября 2023"
                  id="date-out"
                  placeholder="Укажите дату"
+                 required
           >
           <span class="modal__input-message message-ok" style="display: block">На эти даты есть свободные номера. Пока есть.</span>
         </div>
         <label class="modal__control control--adult" for="adult-count">Взрослые:</label>
         <div class="modal__input-wrapper">
-          <input class="modal__input" type="number" name="adult-count" value="2" id="adult-count" placeholder=" ">
+          <input class="modal__input"
+                 type="number"
+                 name="adult-count"
+                 value="2"
+                 id="adult-count"
+                 placeholder=" "
+                 required
+          >
           <button class="input__iterator iterator__minus" type="button">
             <span class="visually-hidden">Уменьшить</span>
             <svg aria-label="true"
@@ -601,27 +617,35 @@
             </svg>
           </button>
         </div>
-        <label class="modal__control control--child" for="child-count">Дети:
+        <span class="modal__control control--child">
+          <label for="child-count">Дети:</label>
           <span class="tooltip">
-          <button class="tooltip__button" type="button" aria-labelledby="tooltip-child">
-            <svg aria-label="true"
-                 focusable="false"
-                 width="2"
-                 height="12"
-                 viewBox="0 0 2 12"
-                 fill="none"
-                 xmlns="http://www.w3.org/2000/svg"
-            >
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
-            </svg>
-          </button>
-          <span class="tooltip__content" role="tooltip" id="tooltip-child">
-            Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+            <button class="tooltip__button" type="button" aria-labelledby="tooltip-child">
+              <svg aria-label="true"
+                   focusable="false"
+                   width="2"
+                   height="12"
+                   viewBox="0 0 2 12"
+                   fill="none"
+                   xmlns="http://www.w3.org/2000/svg"
+              >
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+              </svg>
+            </button>
+            <span class="tooltip__content" role="tooltip" id="tooltip-child">
+              Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+            </span>
           </span>
         </span>
-        </label>
         <div class="modal__input-wrapper">
-          <input class="modal__input" type="number" name="child-count" value="2" id="child-count" placeholder=" ">
+          <input class="modal__input"
+                 type="number"
+                 name="child-count"
+                 value="2"
+                 id="child-count"
+                 placeholder=" "
+                 required
+          >
           <button class="input__iterator iterator__minus" type="button">
             <span class="visually-hidden">Уменьшить</span>
             <svg aria-label="true"

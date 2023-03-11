@@ -755,6 +755,10 @@ a .header__logo:active {
   display: flex;
 }
 
+.filter__form .btn {
+  min-width: 190px;
+}
+
 .filter__group {
   min-width: 150px;
   padding: 0;
